@@ -6,6 +6,18 @@ export default function Procezly() {
     <div className="space-y-24">
       {/* Hero Section */}
       <section className="text-center max-w-4xl mx-auto space-y-6 pt-20">
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src="/procezly_logo.png"
+            alt="Procezly Logo"
+            className="h-20 md:h-24 object-contain"
+          />
+        </motion.div>
         <motion.h1
           className="text-5xl font-bold"
           initial={{ opacity: 0, y: 20 }}
