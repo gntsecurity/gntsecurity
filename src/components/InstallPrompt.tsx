@@ -1,66 +1,59 @@
 import { useEffect, useState } from "react";
 
-function isMobileDevice() {
+function isMobile() {
   return /android|iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase());
 }
 
-function isInStandaloneMode() {
-  return window.matchMedia("(display-mode: standalone)").matches ||
-    (window.navigator as any).standalone === true;
+function isStandalone() {
+  return window.matchMedia("(display-mode: standalone)").matches || (window.navigator as any).standalone === true;
 }
 
 export default function InstallPrompt() {
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
-  const [showPrompt, setShowPrompt] = useState(false);
-  const [isIOSDevice, setIsIOSDevice] = useState(false);
+  const [deferred, setDeferred] = useState<any>(null);
+  const [show, setShow] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
 
   useEffect(() => {
-    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-    const isStandalone = isInStandaloneMode();
-    const isMobile = isMobileDevice();
+    const iOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    const standalone = isStandalone();
+    const mobile = isMobile();
 
-    setIsIOSDevice(isIOS);
+    setIsIOS(iOS);
 
-    if (!isMobile || isStandalone) return;
+    if (!mobile || standalone) return;
 
-    // iOS doesn't fire the beforeinstallprompt event
-    if (isIOS && !isStandalone) {
-      setShowPrompt(true);
+    if (iOS && !standalone) {
+      setShow(true);
     }
 
-    const handler = (e: any) => {
+    const handleBeforeInstall = (e: any) => {
       e.preventDefault();
-      setDeferredPrompt(e);
-      setShowPrompt(true);
+      setDeferred(e);
+      setShow(true);
     };
 
-    window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("beforeinstallprompt", handler);
+    window.addEventListener("beforeinstallprompt", handleBeforeInstall);
+    return () => window.removeEventListener("beforeinstallprompt", handleBeforeInstall);
   }, []);
 
-  const handleInstall = async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const result = await deferredPrompt.userChoice;
-      if (result.outcome === "accepted") {
-        setShowPrompt(false);
-      }
-    }
+  const triggerInstall = async () => {
+    if (!deferred) return;
+    deferred.prompt();
+    const res = await deferred.userChoice;
+    if (res.outcome === "accepted") setShow(false);
   };
 
-  if (!showPrompt) return null;
+  if (!show) return null;
 
   return (
-    <div className="fixed bottom-20 left-4 right-4 p-4 rounded-xl bg-white border shadow-xl z-50 flex justify-between items-center">
-      <div className="text-sm font-medium text-gray-800">
-        {isIOSDevice
-          ? "Tap Share > Add to Home Screen"
-          : "Add GNT Security to your home screen"}
-      </div>
-      {!isIOSDevice && (
+    <div className="fixed bottom-6 left-4 right-4 z-50 rounded-2xl border border-gray-200 bg-white shadow-lg p-4 flex items-center justify-between backdrop-blur-md">
+      <span className="text-sm font-medium text-gray-900">
+        {isIOS ? "Tap Share → Add to Home Screen" : "Install GNT Security to Home Screen"}
+      </span>
+      {!isIOS && (
         <button
-          onClick={handleInstall}
-          className="ml-4 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg font-semibold hover:bg-blue-700 transition"
+          onClick={triggerInstall}
+          className="ml-4 px-4 py-2 text-sm font-semibold rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition"
         >
           Add
         </button>
