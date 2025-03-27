@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 
-function isIOS() {
-  return /iphone|ipad|ipod/i.test(navigator.userAgent);
+function isMobileDevice() {
+  return /android|iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase());
 }
 
 function isInStandaloneMode() {
-  return window.matchMedia("(display-mode: standalone)").matches || (window.navigator as any).standalone === true;
+  return window.matchMedia("(display-mode: standalone)").matches ||
+    (window.navigator as any).standalone === true;
 }
 
 export default function InstallPrompt() {
@@ -14,12 +15,16 @@ export default function InstallPrompt() {
   const [isIOSDevice, setIsIOSDevice] = useState(false);
 
   useEffect(() => {
-    const isiOS = isIOS();
-    const standalone = isInStandaloneMode();
+    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    const isStandalone = isInStandaloneMode();
+    const isMobile = isMobileDevice();
 
-    setIsIOSDevice(isiOS);
+    setIsIOSDevice(isIOS);
 
-    if (isiOS && !standalone) {
+    if (!isMobile || isStandalone) return;
+
+    // iOS doesn't fire the beforeinstallprompt event
+    if (isIOS && !isStandalone) {
       setShowPrompt(true);
     }
 
@@ -30,7 +35,6 @@ export default function InstallPrompt() {
     };
 
     window.addEventListener("beforeinstallprompt", handler);
-
     return () => window.removeEventListener("beforeinstallprompt", handler);
   }, []);
 
@@ -49,7 +53,9 @@ export default function InstallPrompt() {
   return (
     <div className="fixed bottom-20 left-4 right-4 p-4 rounded-xl bg-white border shadow-xl z-50 flex justify-between items-center">
       <div className="text-sm font-medium text-gray-800">
-        {isIOSDevice ? "Tap Share > Add to Home Screen" : "Add GNT Security to your home screen"}
+        {isIOSDevice
+          ? "Tap Share > Add to Home Screen"
+          : "Add GNT Security to your home screen"}
       </div>
       {!isIOSDevice && (
         <button
