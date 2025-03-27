@@ -1,3 +1,11 @@
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+if (!isMobile) {
+  self.addEventListener("install", () => self.skipWaiting());
+  self.addEventListener("activate", () => self.clients.claim());
+  self.addEventListener("fetch", () => {});
+  throw new Error("Skipping service worker on desktop");
+}
+
 const CACHE_NAME = "gnt-cache-v1";
 const ASSETS_TO_CACHE = [
   "/",
