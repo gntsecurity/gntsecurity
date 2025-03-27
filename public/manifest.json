@@ -1,6 +1,6 @@
 {
   "name": "GNT Security",
-  "short_name": "GNT",
+  "short_name": "GNT Security",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

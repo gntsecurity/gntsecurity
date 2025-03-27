@@ -16,13 +16,12 @@ export default function InstallPrompt() {
   useEffect(() => {
     const iOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
     const standalone = isStandalone();
-    const mobile = isMobile();
 
     setIsIOS(iOS);
 
-    if (!mobile || standalone) return;
+    if (standalone) return;
 
-    if (iOS && !standalone) {
+    if (iOS) {
       setShow(true);
     }
 
