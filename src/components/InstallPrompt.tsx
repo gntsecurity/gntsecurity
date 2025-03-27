@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 
-function isMobile() {
-  return /android|iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase());
-}
-
 function isStandalone() {
   return window.matchMedia("(display-mode: standalone)").matches || (window.navigator as any).standalone === true;
 }
