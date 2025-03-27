@@ -12,8 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   </React.StrictMode>
 );
 
-const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-if (isMobile && "serviceWorker" in navigator) {
+if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("/service-worker.js");
   });
