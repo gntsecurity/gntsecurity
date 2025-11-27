@@ -1,95 +1,123 @@
-import { motion } from "framer-motion";
+import { FormEvent, useState } from "react";
 
 export default function Contact() {
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("submitting");
+    setErrorMessage("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const body = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        setErrorMessage(data?.error || "Something went wrong. Please try again.");
+        setStatus("error");
+        return;
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch (err) {
+      setErrorMessage("Network error. Please try again.");
+      setStatus("error");
+    }
+  }
+
   return (
-    <div className="space-y-24">
-      {/* Header */}
-      <section className="text-center max-w-4xl mx-auto pt-20 space-y-6">
-        <motion.h1
-          className="text-5xl font-bold"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Get in Touch
-        </motion.h1>
-        <motion.p
-          className="text-lg text-gray-700"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          Questions? Partnerships? System needs? We’ll respond fast — and bring clarity with us.
-        </motion.p>
-      </section>
+    <div className="max-w-3xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-semibold mb-6">Contact Us</h1>
+      <p className="mb-8">
+        Have a question or need help with your IT and security environment? Send us a message and we&apos;ll get back to you.
+      </p>
 
-      {/* Form */}
-      <section className="max-w-3xl mx-auto">
-        <motion.form
-          className="space-y-6 bg-white p-8 rounded-xl shadow-md border"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("This form is not wired yet. Ready to hook it up to email or API.");
-          }}
-        >
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-            <input
-              type="text"
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Your name"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-            <input
-              type="email"
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="you@example.com"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-            <textarea
-              required
-              rows={5}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Tell us about your project, need, or question..."
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
-          >
-            Send Message
-          </button>
-        </motion.form>
-      </section>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="block mb-1 text-sm font-medium" htmlFor="name">
+            Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            required
+            className="w-full border rounded-md px-3 py-2 text-sm"
+          />
+        </div>
 
-      {/* CTA */}
-      <section className="text-center bg-gradient-to-br from-gray-50 to-white py-20 px-4 rounded-2xl shadow-inner">
-        <motion.h2
-          className="text-3xl font-bold mb-4"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div>
+          <label className="block mb-1 text-sm font-medium" htmlFor="email">
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            className="w-full border rounded-md px-3 py-2 text-sm"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-1 text-sm font-medium" htmlFor="phone">
+            Phone
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            className="w-full border rounded-md px-3 py-2 text-sm"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-1 text-sm font-medium" htmlFor="message">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            rows={5}
+            className="w-full border rounded-md px-3 py-2 text-sm"
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="px-4 py-2 rounded-md bg-blue-600 text-white text-sm font-medium disabled:opacity-60"
         >
-          Let’s build something secure, together.
-        </motion.h2>
-        <a
-          href="mailto:info@gntsecurity.com"
-          className="inline-block mt-4 px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
-        >
-          Email Us Directly
-        </a>
-      </section>
+          {status === "submitting" ? "Sending..." : "Send Message"}
+        </button>
+
+        {status === "success" && (
+          <p className="text-sm text-green-700 mt-2">
+            Thanks for reaching out. We&apos;ll be in touch shortly.
+          </p>
+        )}
+
+        {status === "error" && (
+          <p className="text-sm text-red-700 mt-2">
+            {errorMessage}
+          </p>
+        )}
+      </form>
     </div>
   );
 }
