@@ -14,6 +14,12 @@ import ManagedHomeIT from "../pages/ManagedHomeIT";
 import SecurityStandards from "../pages/SecurityStandards";
 import HardwareProcurement from "../pages/HardwareProcurement";
 import AcceptableUse from "../pages/AcceptableUse";
+import BusinessContinuityDR from "../pages/BusinessContinuityDR";
+import NetworkDeploymentStandards from "../pages/NetworkDeploymentStandards";
+import EmailSecurityExpectations from "../pages/EmailSecurityExpectations";
+import CustomerResourceLibrary from "../pages/CustomerResourceLibrary";
+import Testimonials from "../pages/Testimonials";
+import Careers from "../pages/Careers";
 
 export const routes = [
   { path: "/", element: <Home /> },
@@ -31,5 +37,23 @@ export const routes = [
   { path: "/security-standards", element: <SecurityStandards /> },
   { path: "/hardware-procurement", element: <HardwareProcurement /> },
   { path: "/acceptable-use", element: <AcceptableUse /> },
+  {
+    path: "/business-continuity-disaster-recovery",
+    element: <BusinessContinuityDR />,
+  },
+  {
+    path: "/network-deployment-standards",
+    element: <NetworkDeploymentStandards />,
+  },
+  {
+    path: "/email-security-expectations",
+    element: <EmailSecurityExpectations />,
+  },
+  {
+    path: "/customer-resource-library",
+    element: <CustomerResourceLibrary />,
+  },
+  { path: "/testimonials", element: <Testimonials /> },
+  { path: "/careers", element: <Careers /> },
   { path: "*", element: <NotFound /> },
 ];
