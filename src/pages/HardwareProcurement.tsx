@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Monitor, Server, ShoppingCart, ClipboardCheck, DollarSign, Barcode } from "lucide-react";
+import { Monitor, Server, ClipboardCheck, DollarSign, Barcode } from "lucide-react";
 
 export default function HardwareProcurement() {
   return (
@@ -14,112 +14,137 @@ export default function HardwareProcurement() {
           Hardware Procurement
         </motion.h1>
         <motion.p
-          className="text-lg text-gray-700"
-          initial={{ opacity: 0, y: 10 }}
+          className="text-lg text-gray-600"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15, duration: 0.5 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
         >
-          We provide business-grade hardware selected, sourced, configured, and deployed under one roof.
-          Single vendor accountability. Zero guesswork.
+          From workstations to servers, we handle the entire lifecycle of your IT hardware—selection, purchasing,
+          deployment, and lifecycle management.
         </motion.p>
       </section>
 
-      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <motion.div
-          className="bg-white border p-6 rounded-2xl shadow-sm space-y-3"
+          className="p-8 border rounded-2xl shadow-sm hover:shadow-md transition-shadow bg-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
-          <Monitor className="w-10 h-10 text-blue-600" />
-          <h2 className="text-xl font-semibold">Workstations & Laptops</h2>
-          <ul className="text-sm text-gray-700 space-y-1">
-            <li>• Standardized configurations</li>
-            <li>• Reliable business-class hardware</li>
-            <li>• Imaging and setup included</li>
-            <li>• Replacement lifecycle planning</li>
-          </ul>
+          <Monitor className="w-10 h-10 mb-4" />
+          <h2 className="text-xl font-semibold mb-2">Workstations & Laptops</h2>
+          <p className="text-gray-600">
+            Sourcing business-grade desktops and laptops from trusted vendors, tailored to your performance,
+            security, and budget needs.
+          </p>
         </motion.div>
 
         <motion.div
-          className="bg-white border p-6 rounded-2xl shadow-sm space-y-3"
+          className="p-8 border rounded-2xl shadow-sm hover:shadow-md transition-shadow bg-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.4 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <Server className="w-10 h-10 text-blue-600" />
-          <h2 className="text-xl font-semibold">Servers & Network</h2>
-          <ul className="text-sm text-gray-700 space-y-1">
-            <li>• Infrastructure aligned to business scale</li>
-            <li>• Quality routing and switching</li>
-            <li>• Secure Wi-Fi deployments</li>
-            <li>• Smart growth and expansion paths</li>
-          </ul>
+          <Server className="w-10 h-10 mb-4" />
+          <h2 className="text-xl font-semibold mb-2">Servers & Infrastructure</h2>
+          <p className="text-gray-600">
+            Procurement for on-premises and hybrid infrastructures including servers, storage, and networking
+            equipment with proper sizing and redundancy.
+          </p>
         </motion.div>
 
         <motion.div
-          className="bg-white border p-6 rounded-2xl shadow-sm space-y-3"
+          className="p-8 border rounded-2xl shadow-sm hover:shadow-md transition-shadow bg-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.4 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Barcode className="w-10 h-10 text-blue-600" />
-          <h2 className="text-xl font-semibold">Lifecycle Inventory</h2>
-          <ul className="text-sm text-gray-700 space-y-1">
-            <li>• Asset tracking</li>
-            <li>• Warranty monitoring</li>
-            <li>• End-of-life planning</li>
-            <li>• Proper disposal of retired devices</li>
-          </ul>
+          <ClipboardCheck className="w-10 h-10 mb-4" />
+          <h2 className="text-xl font-semibold mb-2">Standardized Hardware Profiles</h2>
+          <p className="text-gray-600">
+            We help define standard hardware profiles for roles in your organization to simplify ordering,
+            deployment, and support.
+          </p>
         </motion.div>
       </section>
 
-      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 pb-24">
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         <motion.div
-          className="bg-gray-50 border p-6 rounded-2xl space-y-4"
+          className="space-y-6"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <ClipboardCheck className="w-8 h-8 text-blue-600" />
-          <h2 className="text-xl font-semibold">Pre-Deployment Services</h2>
-          <ul className="text-sm text-gray-700 space-y-2">
-            <li>• System provisioning</li>
-            <li>• Business app installation</li>
-            <li>• User credential setup</li>
-            <li>• On-site or remote rollout</li>
+          <h2 className="text-2xl font-semibold">Procurement Process</h2>
+          <p className="text-gray-600">
+            We follow a structured, transparent procurement process to ensure you get the right hardware at the right
+            price with minimal disruption to your operations.
+          </p>
+          <ul className="space-y-3 text-gray-700">
+            <li>• Requirements gathering with stakeholders</li>
+            <li>• Vendor and model selection based on standards</li>
+            <li>• Quote sourcing and cost comparison</li>
+            <li>• Ordering, tracking, and receiving management</li>
+            <li>• Asset tagging and inventory updates</li>
           </ul>
         </motion.div>
 
         <motion.div
-          className="bg-white border p-6 rounded-2xl shadow-sm space-y-4"
+          className="space-y-6"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <DollarSign className="w-8 h-8 text-blue-600" />
-          <h2 className="text-xl font-semibold">Procurement Advantage</h2>
-          <ul className="text-sm text-gray-700 space-y-2">
-            <li>• Competitive pricing</li>
-            <li>• Consistent vendor reliability</li>
-            <li>• Zero markup surprises</li>
-            <li>• Invoicing aligned to budgets</li>
-          </ul>
+          <div className="p-6 border rounded-2xl bg-white shadow-sm flex items-start gap-4">
+            <DollarSign className="w-8 h-8 mt-1" />
+            <div>
+              <h3 className="font-semibold mb-1">Cost Optimization</h3>
+              <p className="text-gray-600">
+                We standardize on reliable hardware platforms, negotiate with vendors, and avoid consumer-grade
+                equipment that costs more to support over time.
+              </p>
+            </div>
+          </div>
+
+          <div className="p-6 border rounded-2xl bg-white shadow-sm flex items-start gap-4">
+            <Barcode className="w-8 h-8 mt-1" />
+            <div>
+              <h3 className="font-semibold mb-1">Asset Tracking</h3>
+              <p className="text-gray-600">
+                Each device is tracked from purchase through deployment to retirement, improving compliance, warranty
+                handling, and lifecycle planning.
+              </p>
+            </div>
+          </div>
         </motion.div>
       </section>
 
-      <section className="text-center pb-32">
-        <a
-          href="mailto:sales@gntsecurity.com"
-          className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+      <section className="max-w-4xl mx-auto pb-20">
+        <motion.div
+          className="p-8 border rounded-2xl bg-gray-50"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          Request Hardware Quotes
-        </a>
+          <h2 className="text-2xl font-semibold mb-4">Why Centralize Hardware Procurement?</h2>
+          <p className="text-gray-600 mb-3">
+            Decentralized purchasing leads to mismatched hardware, unsupported devices, and higher long-term costs.
+            With centralized procurement, your organization benefits from:
+          </p>
+          <ul className="space-y-2 text-gray-700">
+            <li>• Consistent standards across all endpoints</li>
+            <li>• Predictable performance and compatibility</li>
+            <li>• Streamlined onboarding and replacement processes</li>
+            <li>• Better security posture and easier patch management</li>
+            <li>• Clear inventory and lifecycle visibility</li>
+          </ul>
+        </motion.div>
       </section>
     </div>
   );

@@ -3,7 +3,6 @@ import {
   Shield,
   Clock,
   AlertTriangle,
-  Wrench,
   Server,
   Wifi,
   Database,
@@ -24,179 +23,157 @@ export default function SLA() {
           Service Level Agreement
         </motion.h1>
         <motion.p
-          className="text-lg text-gray-700"
-          initial={{ opacity: 0, y: 10 }}
+          className="text-lg text-gray-600"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
         >
-          This Service Level Agreement defines how GNT Security delivers managed IT and
-          cybersecurity services, how fast we respond, and what you can expect during
-          normal operations and incidents.
+          Clear, predictable support commitments so you always know what to expect from your IT partner.
         </motion.p>
       </section>
 
-      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <section className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
         <motion.div
-          className="space-y-6 bg-white border rounded-2xl p-6 shadow-sm"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          className="p-8 border rounded-2xl shadow-sm bg-white"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
-          <div className="flex items-center gap-3">
-            <Clock className="w-6 h-6 text-blue-600" />
-            <h2 className="text-xl font-semibold">Support Hours</h2>
-          </div>
-          <ul className="space-y-2 text-sm text-gray-700">
-            <li>• Standard support: Monday–Friday, 8:00 AM–5:00 PM ET</li>
-            <li>• After-hours support: best-effort, incident-based response</li>
-            <li>• Emergency incidents can be escalated by phone at any time</li>
-          </ul>
-
-          <div className="pt-4">
-            <div className="flex items-center gap-3 mb-2">
-              <PhoneCall className="w-5 h-5 text-blue-600" />
-              <p className="text-sm text-gray-800 font-semibold">
-                Phone: 937.671.5597
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-blue-600" />
-              <p className="text-sm text-gray-800 font-semibold break-all">
-                Sales & general: sales@gntsecurity.com
-              </p>
-            </div>
-          </div>
+          <Clock className="w-10 h-10 mb-4" />
+          <h2 className="text-xl font-semibold mb-2">Response Targets</h2>
+          <p className="text-gray-600">
+            Defined response windows based on severity: from immediate engagement on critical outages to same-day
+            response on standard requests.
+          </p>
         </motion.div>
 
         <motion.div
-          className="space-y-6 bg-gray-50 border rounded-2xl p-6"
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          className="p-8 border rounded-2xl shadow-sm bg-white"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="flex items-center gap-3">
-            <AlertTriangle className="w-6 h-6 text-blue-600" />
-            <h2 className="text-xl font-semibold">Priority Levels & Targets</h2>
-          </div>
-          <div className="space-y-3 text-sm text-gray-700">
-            <div>
-              <p className="font-semibold text-gray-900">Priority 1 – Critical</p>
-              <p>System-wide outage, security incident, or business halted.</p>
-              <p>Target: response within 1 hour, work continuously until stable.</p>
-            </div>
-            <div>
-              <p className="font-semibold text-gray-900">Priority 2 – High</p>
-              <p>Major degradation, multiple users impacted, no simple workaround.</p>
-              <p>Target: response within 2 business hours, resolution as soon as possible.</p>
-            </div>
-            <div>
-              <p className="font-semibold text-gray-900">Priority 3 – Standard</p>
-              <p>Single-user issues, requests, or minor degradation.</p>
-              <p>Target: response within 1 business day.</p>
-            </div>
-            <div>
-              <p className="font-semibold text-gray-900">Priority 4 – Scheduled Work</p>
-              <p>Planned changes, enhancements, audits, and project tasks.</p>
-              <p>Target: scheduled by mutual agreement.</p>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-
-      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        <motion.div
-          className="space-y-5 bg-white border rounded-2xl p-6 shadow-sm"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex items-center gap-3">
-            <Shield className="w-6 h-6 text-blue-600" />
-            <h2 className="text-xl font-semibold">Included Services</h2>
-          </div>
-          <ul className="space-y-2 text-sm text-gray-700">
-            <li>• Monitoring of covered endpoints, servers, and core network devices</li>
-            <li>• Security patching and OS updates on an agreed schedule</li>
-            <li>• Endpoint protection deployment and health monitoring</li>
-            <li>• Remote support for covered systems</li>
-            <li>• Backup monitoring for enrolled devices and workloads</li>
-            <li>• Documentation of network diagrams and key configurations</li>
-            <li>• Advice on security posture and improvement roadmap</li>
-          </ul>
+          <Shield className="w-10 h-10 mb-4" />
+          <h2 className="text-xl font-semibold mb-2">Coverage & Scope</h2>
+          <p className="text-gray-600">
+            End-user devices, servers, networking, and core line-of-business services are covered under your SLA with
+            clearly defined responsibilities.
+          </p>
         </motion.div>
 
         <motion.div
-          className="space-y-5 bg-gray-50 border rounded-2xl p-6"
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          className="p-8 border rounded-2xl shadow-sm bg-white"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="flex items-center gap-3">
-            <AlertTriangle className="w-6 h-6 text-blue-600" />
-            <h2 className="text-xl font-semibold">Out-of-Scope Items</h2>
-          </div>
-          <ul className="space-y-2 text-sm text-gray-700">
-            <li>• Hardware costs, licensing, and third-party subscription fees</li>
-            <li>• Work on systems not enrolled under management</li>
-            <li>• Recovery from issues caused by unsupported changes or software</li>
-            <li>• Major projects, redesigns, or relocations without a project agreement</li>
-            <li>• Onsite visits outside the normal service area without prior approval</li>
-          </ul>
-          <p className="text-xs text-gray-500">
-            These items can be handled as separate, quoted project work or time-and-materials
-            services.
+          <AlertTriangle className="w-10 h-10 mb-4" />
+          <h2 className="text-xl font-semibold mb-2">Priority Handling</h2>
+          <p className="text-gray-600">
+            Issues affecting many users or critical services are automatically escalated and handled before lower
+            priority requests.
           </p>
         </motion.div>
       </section>
 
-      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 pb-20">
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         <motion.div
-          className="space-y-5 bg-white border rounded-2xl p-6 shadow-sm"
+          className="space-y-6"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-3">
-            <Server className="w-6 h-6 text-blue-600" />
-            <h2 className="text-xl font-semibold">Maintenance & Changes</h2>
-          </div>
-          <ul className="space-y-2 text-sm text-gray-700">
-            <li>• Routine maintenance windows are scheduled outside core business hours when possible.</li>
-            <li>• Servers, firewalls, and critical systems follow a change plan before updates.</li>
-            <li>• Emergency changes may be implemented immediately to protect stability or security.</li>
-            <li>• Changes are documented in environment notes and diagrams after completion.</li>
+          <h2 className="text-2xl font-semibold">Service Availability</h2>
+          <p className="text-gray-600">
+            Our SLAs distinguish between standard business hours support and after-hours emergency response, ensuring
+            you always know when and how to reach us.
+          </p>
+          <ul className="space-y-2 text-gray-700">
+            <li>• Business hours coverage for routine support and changes</li>
+            <li>• After-hours on-call availability for critical incidents</li>
+            <li>• Planned maintenance windows communicated in advance</li>
           </ul>
         </motion.div>
 
         <motion.div
-          className="space-y-5 bg-gray-50 border rounded-2xl p-6"
+          className="grid gap-4"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-3">
-            <Wifi className="w-6 h-6 text-blue-600" />
-            <h2 className="text-xl font-semibold">Client Responsibilities</h2>
+          <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
+            <Server className="w-8 h-8 mt-1" />
+            <div>
+              <h3 className="font-semibold mb-1">Infrastructure Uptime</h3>
+              <p className="text-gray-600">
+                Monitoring and alerting on your servers, firewalls, and core services with documented uptime targets
+                and remediation workflows.
+              </p>
+            </div>
           </div>
-          <ul className="space-y-2 text-sm text-gray-700">
-            <li>• Provide timely access to systems, locations, and staff as needed.</li>
-            <li>• Notify GNT Security of planned changes that may impact managed systems.</li>
-            <li>• Use supported hardware and software wherever possible.</li>
-            <li>• Report incidents and suspicious activity as soon as they are noticed.</li>
-            <li>• Maintain valid contracts and payments so services remain active.</li>
-          </ul>
-          <div className="mt-4 flex items-center gap-3">
-            <Database className="w-5 h-5 text-blue-600" />
-            <p className="text-xs text-gray-600">
-              Reliable outcomes depend on both sides keeping systems documented, consistent,
-              and supported.
-            </p>
+
+          <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
+            <Wifi className="w-8 h-8 mt-1" />
+            <div>
+              <h3 className="font-semibold mb-1">Network Reliability</h3>
+              <p className="text-gray-600">
+                Support for WAN, LAN, and secure remote access, coordinated with your ISPs and upstream vendors when
+                required.
+              </p>
+            </div>
+          </div>
+
+          <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
+            <Database className="w-8 h-8 mt-1" />
+            <div>
+              <h3 className="font-semibold mb-1">Backup & Recovery</h3>
+              <p className="text-gray-600">
+                Defined recovery point and recovery time objectives (RPO/RTO) for key systems, with regular test
+                restores documented.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      <section className="max-w-4xl mx-auto pb-20">
+        <motion.div
+          className="p-8 border rounded-2xl bg-gray-50"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-2xl font-semibold mb-4">How to Engage Support</h2>
+          <p className="text-gray-600 mb-4">
+            Multiple channels are available for opening tickets, escalating urgent issues, and following up on
+            existing requests.
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="flex gap-3 items-start">
+              <PhoneCall className="w-6 h-6 mt-1" />
+              <div>
+                <h3 className="font-semibold">Phone</h3>
+                <p className="text-gray-600">
+                  Call the support line for urgent incidents or outages that require immediate attention.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3 items-start">
+              <Mail className="w-6 h-6 mt-1" />
+              <div>
+                <h3 className="font-semibold">Email / Portal</h3>
+                <p className="text-gray-600">
+                  Submit requests and non-urgent issues through the ticketing portal or support email for proper
+                  tracking and prioritization.
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
       </section>
