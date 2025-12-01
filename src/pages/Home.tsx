@@ -5,7 +5,6 @@ import {
   Zap,
   BarChart3,
   Wifi,
-  Cloud,
   PhoneCall,
 } from "lucide-react";
 
