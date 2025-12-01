@@ -1,18 +1,17 @@
-import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Contact from "../pages/Contact";
-import Services from "../pages/Services";
 import Procezly from "../pages/Procezly";
+import Services from "../pages/Services";
+import Contact from "../pages/Contact";
 import GitHub from "../pages/GitHub";
+import NotFound from "../pages/NotFound";
 
-const router = createBrowserRouter([
+export const routes = [
   { path: "/", element: <Home /> },
-  { path: "/About", element: <About /> },
-  { path: "/Services", element: <Services /> },
-  { path: "/Contact", element: <Contact /> },
-  { path: "/Procezly", element: <Procezly /> },
-  { path: "/GitHub", element: <GitHub /> }
-]);
-
-export default router;
+  { path: "/about", element: <About /> },
+  { path: "/procezly", element: <Procezly /> },
+  { path: "/services", element: <Services /> },
+  { path: "/contact", element: <Contact /> },
+  { path: "/GitHub", element: <GitHub /> },
+  { path: "*", element: <NotFound /> },
+];
