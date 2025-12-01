@@ -16,11 +16,13 @@ export default function Navbar() {
     <>
       <header className="border-b bg-white">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold">
-              GNT
-            </div>
-            <div className="flex flex-col leading-tight">
+          <Link to="/" className="flex items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="GNT Security"
+              className="h-8 w-auto"
+            />
+            <div className="hidden sm:flex flex-col leading-tight">
               <span className="font-semibold text-sm">GNT Security</span>
               <span className="text-xs text-gray-500">
                 Managed IT & Cybersecurity – Ohio
