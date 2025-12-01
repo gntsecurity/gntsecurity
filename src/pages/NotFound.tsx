@@ -14,7 +14,7 @@ import {
 
 export default function NotFound() {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center">
+    <div className="min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900">
       <div className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 text-slate-50 shadow-[0_0_80px_rgba(37,99,235,0.8)]">
         <div className="pointer-events-none absolute -left-32 -top-32 h-72 w-72 rounded-full bg-blue-500/30 blur-3xl" />
         <div className="pointer-events-none absolute -right-32 -bottom-40 h-80 w-80 rounded-full bg-fuchsia-500/20 blur-3xl" />
@@ -41,7 +41,7 @@ export default function NotFound() {
             </div>
 
             <p className="max-w-xl text-sm md:text-base text-slate-200/90">
-              You just breached outside the mapped perimeter. This route doesn&apos;t exist in
+              You just breached outside the mapped perimeter. This route does not exist in
               any table, cache, or config. Either the link rotted, or you discovered a new
               level of the network.
             </p>
@@ -200,7 +200,7 @@ export default function NotFound() {
                       Or keep exploring the edges
                     </p>
                     <p className="text-xs text-slate-300">
-                      If you keep finding paths like this, reach out. That means you&apos;re
+                      If you keep finding paths like this, reach out. That means you are
                       thinking like an engineer, not just a user.
                     </p>
                   </div>
@@ -212,4 +212,4 @@ export default function NotFound() {
       </div>
     </div>
   );
-}SS
+}
