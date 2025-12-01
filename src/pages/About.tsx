@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { Code2, Network, Lock } from "lucide-react";
+import { Shield, Network, Users } from "lucide-react";
 
 export default function About() {
   return (
     <div className="space-y-24">
-      {/* Introduction */}
       <section className="text-center max-w-4xl mx-auto space-y-6 pt-20">
         <motion.h1
           className="text-5xl font-bold"
@@ -12,7 +11,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Gage's Networking, Technology & Security
+          About GNT Security
         </motion.h1>
         <motion.p
           className="text-lg text-gray-700"
@@ -20,104 +19,100 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          GNT Security isn't a service provider. It's a systems builder. A digital backbone for modern enterprises — fusing infrastructure, innovation, and security into one cohesive force.
+          GNT Security is a security-driven Managed Service Provider focused on keeping Ohio
+          businesses and homes secure, online, and supported.
         </motion.p>
       </section>
 
-      {/* Mission + Vision */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <motion.div
-          className="space-y-4"
-          initial={{ opacity: 0, x: -30 }}
+          className="space-y-6"
+          initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl font-semibold">Mission</h2>
+          <h2 className="text-2xl font-semibold flex items-center gap-2">
+            <Shield className="w-6 h-6 text-blue-600" />
+            What We Care About
+          </h2>
           <p className="text-gray-700">
-            To engineer secure, scalable systems that empower businesses to move faster — with more clarity, more control, and no compromises.
+            Every outage, slow network, and unpatched system is a risk. Our job is to shrink that
+            risk and give you a stable, secure environment that quietly does its job in the
+            background.
           </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div className="space-y-2">
+              <p className="font-semibold text-gray-900">For Businesses</p>
+              <p>• Managed workstations, servers, and networking</p>
+              <p>• Security-focused standards and baselines</p>
+              <p>• Clear documentation and repeatable processes</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-semibold text-gray-900">For Home Users</p>
+              <p>• Clean, secure home networks and Wi-Fi</p>
+              <p>• Protected devices for family and work-from-home</p>
+              <p>• Backup and recovery when something breaks</p>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
-          className="space-y-4"
-          initial={{ opacity: 0, x: 30 }}
+          className="space-y-6"
+          initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl font-semibold">Vision</h2>
-          <p className="text-gray-700">
-            To lead the industry in clean, intuitive, secure-first solutions — powering tomorrow's organizations with simplicity and strength.
-          </p>
+          <h2 className="text-2xl font-semibold flex items-center gap-2">
+            <Network className="w-6 h-6 text-blue-600" />
+            How We Operate
+          </h2>
+          <ul className="space-y-3 text-sm text-gray-700">
+            <li>• Standardized builds for endpoints and network gear</li>
+            <li>• Monitoring, alerting, and patching baked into every environment</li>
+            <li>• Change control on core systems, so nothing moves without a plan</li>
+            <li>• Documented diagrams and configuration baselines</li>
+            <li>• Direct access to someone who actually understands your environment</li>
+          </ul>
+          <div className="rounded-2xl bg-gray-50 border p-4 text-sm text-gray-700">
+            <p className="font-semibold text-gray-900 mb-2">Service Area</p>
+            <p>Serving Ohio businesses and home IT needs with remote and onsite options.</p>
+          </div>
         </motion.div>
       </section>
 
-      {/* Pillars */}
-      <section className="max-w-6xl mx-auto space-y-12">
-        <motion.h2
-          className="text-3xl font-bold text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          What Drives Us
-        </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              icon: <Network className="w-8 h-8 text-blue-600" />,
-              title: "Precision Networking",
-              desc: "We architect networks that never guess — only guarantee. Secure, efficient, and always online."
-            },
-            {
-              icon: <Code2 className="w-8 h-8 text-blue-600" />,
-              title: "Tech Without Bloat",
-              desc: "Every component matters. Every tool has a reason. Complexity removed. Power retained."
-            },
-            {
-              icon: <Lock className="w-8 h-8 text-blue-600" />,
-              title: "Security at the Core",
-              desc: "From physical to digital — our default posture is secure. Not as a feature, but as a foundation."
-            }
-          ].map(({ icon, title, desc }, i) => (
-            <motion.div
-              key={i}
-              className="bg-white border rounded-xl p-6 shadow-md space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div>{icon}</div>
-              <h3 className="text-lg font-semibold">{title}</h3>
-              <p className="text-gray-600">{desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Closing Statement */}
-      <section className="text-center max-w-3xl mx-auto space-y-6">
-        <motion.h2
-          className="text-2xl font-bold"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          This isn’t just tech.
-        </motion.h2>
-        <motion.p
-          className="text-gray-700 text-lg"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          It’s a new standard for how technology and infrastructure should work — seamlessly, securely, and smart from the start.
-        </motion.p>
+      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-20">
+        {[
+          {
+            icon: <Users className="w-6 h-6 text-blue-600" />,
+            title: "Straightforward Communication",
+            body: "Plain language, clear expectations, and real answers instead of vague updates.",
+          },
+          {
+            icon: <Shield className="w-6 h-6 text-blue-600" />,
+            title: "Security Built In",
+            body: "Backups, MFA, endpoint protection, and least-privilege access are treated as defaults.",
+          },
+          {
+            icon: <Network className="w-6 h-6 text-blue-600" />,
+            title: "Stable Foundations",
+            body: "Clean networks, consistent device builds, and predictable behavior make everything else easier.",
+          },
+        ].map((item) => (
+          <motion.div
+            key={item.title}
+            className="bg-white border rounded-2xl p-6 shadow-md space-y-3"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div>{item.icon}</div>
+            <h3 className="text-lg font-semibold">{item.title}</h3>
+            <p className="text-gray-700 text-sm">{item.body}</p>
+          </motion.div>
+        ))}
       </section>
     </div>
   );

@@ -1,49 +1,56 @@
 import { Link, useLocation } from "react-router-dom";
-import {
-  Home,
-  Info,
-  Layers,
-  Wrench,
-  Phone,
-} from "lucide-react";
+import { Home, Info, Wrench, Phone } from "lucide-react";
 
 const navItems = [
   { name: "Home", path: "/", icon: Home },
   { name: "About", path: "/about", icon: Info },
-  { name: "Procezly", path: "/procezly", icon: Layers },
   { name: "Services", path: "/services", icon: Wrench },
   { name: "Contact", path: "/contact", icon: Phone },
 ];
 
 export default function Navbar() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const pathname = location.pathname;
 
   return (
     <>
-      {/* Desktop Navbar */}
-      <header className="hidden md:block w-full border-b border-gray-200 bg-white">
-        <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-3">
-            <img src="/logo.png" alt="GNT Security Logo" className="h-8 w-auto" />
+      <header className="border-b bg-white">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+          <Link to="/" className="flex items-center gap-2">
+            <div className="h-8 w-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold">
+              GNT
+            </div>
+            <div className="flex flex-col leading-tight">
+              <span className="font-semibold text-sm">GNT Security</span>
+              <span className="text-xs text-gray-500">
+                Managed IT & Cybersecurity – Ohio
+              </span>
+            </div>
           </Link>
-          <nav className="space-x-6">
-            {navItems.map(({ name, path }) => (
+          <nav className="hidden md:flex items-center space-x-6 text-sm">
+            {navItems.map(({ name, path, icon: Icon }) => (
               <Link
                 key={name}
                 to={path}
-                className={`text-sm font-medium transition hover:text-blue-600 ${
-                  pathname === path ? "text-blue-600" : "text-gray-700"
-                }`}
+                className={`inline-flex items-center gap-2 ${
+                  pathname === path ? "text-blue-600 font-semibold" : "text-gray-600"
+                } hover:text-blue-700`}
               >
+                <Icon className="h-4 w-4" />
                 {name}
               </Link>
             ))}
+            <a
+              href="mailto:sales@gntsecurity.com"
+              className="ml-4 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+            >
+              Email Sales
+            </a>
           </nav>
         </div>
       </header>
 
-      {/* Mobile Bottom Nav */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 flex justify-around items-center py-2 md:hidden">
+      <nav className="md:hidden fixed bottom-0 inset-x-0 border-t bg-white z-40 flex justify-around py-2">
         {navItems.map(({ name, path, icon: Icon }) => (
           <Link
             key={name}

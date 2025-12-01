@@ -10,7 +10,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Get in Touch
+          Get Support Or Request Service
         </motion.h1>
         <motion.p
           className="text-lg text-gray-700"
@@ -18,88 +18,110 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Questions? Partnerships? System needs? We’ll respond fast — and bring clarity with us.
+          Serving Ohio businesses and home IT needs. Reach out with issues, projects, or questions
+          about managed service plans.
         </motion.p>
       </section>
 
-      <section className="max-w-3xl mx-auto">
-        <motion.form
-          className="space-y-6 bg-white p-8 rounded-xl shadow-md border"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start pb-20">
+        <motion.div
+          className="space-y-6"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          action="https://formspree.io/f/mnnkpqlk"
-          method="POST"
         >
+          <div className="bg-gray-50 border rounded-2xl p-6 space-y-4">
+            <h2 className="text-xl font-semibold">Direct Contact</h2>
+            <div className="space-y-1 text-sm text-gray-700">
+              <p>
+                <span className="font-semibold text-gray-900">Phone:</span>{" "}
+                <a href="tel:+19376715597" className="text-blue-600 hover:underline">
+                  937.671.5597
+                </a>
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900">Sales & General:</span>{" "}
+                <a
+                  href="mailto:sales@gntsecurity.com"
+                  className="text-blue-600 hover:underline break-all"
+                >
+                  sales@gntsecurity.com
+                </a>
+              </p>
+            </div>
+            <p className="text-sm text-gray-700">
+              If this is an urgent outage or security concern, call the number above and include a
+              short description of what is down.
+            </p>
+          </div>
+          <div className="text-sm text-gray-700">
+            <p className="font-semibold text-gray-900 mb-1">Service Area</p>
+            <p>Onsite availability within Ohio where reasonable. Remote support is available more broadly.</p>
+          </div>
+        </motion.div>
+
+        <motion.form
+          className="space-y-6 bg-white border rounded-2xl p-8 shadow-md"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-xl font-semibold mb-2">Send A Message</h2>
+          <p className="text-sm text-gray-600 mb-4">
+            Use this form to describe your environment, issue, or project. You will receive a reply
+            from GNT Security directly.
+          </p>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Name
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
             <input
               type="text"
-              name="name"
               required
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Your name"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Email
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
             <input
               type="email"
-              name="email"
               required
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="you@example.com"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Message
-            </label>
-            <textarea
-              name="message"
+            <label className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+            <input
+              type="text"
               required
-              rows={5}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Tell us about your project, need, or question..."
+              placeholder="Support request, project, or question"
             />
           </div>
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="New contact from gntsecurity.com"
-          />
-
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Details About Your Environment Or Issue
+            </label>
+            <textarea
+              rows={5}
+              required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Number of devices, type of business or home setup, what is going wrong, and any deadlines."
+            />
+          </div>
           <button
             type="submit"
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+            className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"
           >
-            Send Message
+            Submit
           </button>
+          <p className="text-xs text-gray-500">
+            Submitting this form does not create a support contract yet. GNT Security will respond
+            to gather more details and provide options.
+          </p>
         </motion.form>
-      </section>
-
-      <section className="text-center bg-gradient-to-br from-gray-50 to-white py-20 px-4 rounded-2xl shadow-inner">
-        <motion.h2
-          className="text-3xl font-bold mb-4"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Let’s build something secure, together.
-        </motion.h2>
-        <a
-          href="mailto:info@gntsecurity.com"
-          className="inline-block mt-4 px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
-        >
-          Email Us Directly
-        </a>
       </section>
     </div>
   );

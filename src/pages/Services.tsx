@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
-import { Cloud, ServerCog, Shield, Wrench, Cpu, KeyRound } from "lucide-react";
+import {
+  Cloud,
+  ServerCog,
+  Shield,
+  Wrench,
+  Cpu,
+  KeyRound,
+  Wifi,
+  HardDrive,
+} from "lucide-react";
 
 export default function Services() {
   return (
     <div className="space-y-24">
-      {/* Header */}
       <section className="text-center max-w-4xl mx-auto pt-20 space-y-6">
         <motion.h1
           className="text-5xl font-bold"
@@ -12,7 +20,7 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Infrastructure. Security. Precision.
+          Managed Services Built Around Security
         </motion.h1>
         <motion.p
           className="text-lg text-gray-700"
@@ -20,76 +28,151 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          GNT Security delivers advanced systems engineering and modern infrastructure support — built for reliability, control, and speed.
+          One provider for endpoints, networks, backups, cloud, and security. Designed for Ohio
+          businesses and home environments that cannot afford downtime.
         </motion.p>
       </section>
 
-      {/* Service Grid */}
       <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {[
           {
             icon: <ServerCog className="w-8 h-8 text-blue-600" />,
-            title: "Network Design",
-            desc: "From foundational cabling to redundant, scalable architecture — we design your backbone like it’s our own."
+            title: "Managed IT & Helpdesk",
+            desc: [
+              "Workstation and laptop management",
+              "OS and application patching",
+              "User accounts and permissions",
+              "Remote and onsite troubleshooting",
+              "Hardware recommendations and setup",
+            ],
           },
           {
             icon: <Shield className="w-8 h-8 text-blue-600" />,
-            title: "Security Systems",
-            desc: "Camera setups, access control, alarm integrations — all secured with enterprise-grade protocols."
+            title: "Cybersecurity Services",
+            desc: [
+              "Endpoint protection and EDR",
+              "Firewall configuration and review",
+              "Security policies and hardening",
+              "Security awareness guidance",
+              "Incident response assistance",
+            ],
+          },
+          {
+            icon: <Wifi className="w-8 h-8 text-blue-600" />,
+            title: "Network & Wi-Fi",
+            desc: [
+              "Secure Wi-Fi and guest networks",
+              "LAN segmentation and VLANs",
+              "VPN and remote access",
+              "Router and switch configuration",
+              "Performance and reliability tuning",
+            ],
+          },
+          {
+            icon: <HardDrive className="w-8 h-8 text-blue-600" />,
+            title: "Backup & Business Continuity",
+            desc: [
+              "Workstation and server backups",
+              "Local and offsite options",
+              "Tested restore procedures",
+              "Ransomware-ready recovery planning",
+              "Backup monitoring and alerts",
+            ],
           },
           {
             icon: <Cloud className="w-8 h-8 text-blue-600" />,
-            title: "Cloud Infrastructure",
-            desc: "AWS, GCP, and hybrid models engineered for performance, visibility, and cost control."
+            title: "Cloud & Productivity",
+            desc: [
+              "Email and productivity platform management",
+              "Identity and MFA enforcement",
+              "File sharing and access controls",
+              "Mailbox and data migrations",
+              "License and subscription cleanup",
+            ],
           },
           {
             icon: <Wrench className="w-8 h-8 text-blue-600" />,
-            title: "Automation & Monitoring",
-            desc: "We automate everything that can be automated — with alerting, recovery, and insight built in."
+            title: "Projects & Consulting",
+            desc: [
+              "New office and move projects",
+              "Network redesign and cleanup",
+              "Hardware refresh planning",
+              "Home lab and home office builds",
+              "Security and configuration reviews",
+            ],
           },
-          {
-            icon: <Cpu className="w-8 h-8 text-blue-600" />,
-            title: "Edge Systems",
-            desc: "Deploy compute power where it’s needed most — at the edge. Lightweight, secure, and fast."
-          },
-          {
-            icon: <KeyRound className="w-8 h-8 text-blue-600" />,
-            title: "Zero Trust Consulting",
-            desc: "We implement and advise on true zero-trust environments. Internal protection, verified identity, and encryption by default."
-          }
-        ].map(({ icon, title, desc }, i) => (
+        ].map((card, i) => (
           <motion.div
-            key={i}
-            className="bg-white border rounded-xl p-6 shadow-md space-y-4"
+            key={card.title}
+            className="bg-white border rounded-2xl p-6 shadow-md space-y-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
+            transition={{ delay: i * 0.05 }}
             viewport={{ once: true }}
           >
-            <div>{icon}</div>
-            <h3 className="text-lg font-semibold">{title}</h3>
-            <p className="text-gray-600">{desc}</p>
+            <div>{card.icon}</div>
+            <h3 className="text-xl font-semibold">{card.title}</h3>
+            <ul className="space-y-1 text-sm text-gray-700">
+              {card.desc.map((item) => (
+                <li key={item}>• {item}</li>
+              ))}
+            </ul>
           </motion.div>
         ))}
       </section>
 
-      {/* Final CTA */}
-      <section className="text-center bg-gradient-to-br from-gray-50 to-white py-20 px-4 rounded-2xl shadow-inner">
-        <motion.h2
-          className="text-3xl font-bold mb-4"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start pb-20">
+        <motion.div
+          className="space-y-4"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Build with GNT Security
-        </motion.h2>
-        <a
-          href="/contact"
-          className="inline-block mt-4 px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
+          <h2 className="text-2xl font-semibold flex items-center gap-2">
+            <Cpu className="w-6 h-6 text-blue-600" />
+            What Every Managed Client Receives
+          </h2>
+          <ul className="space-y-2 text-sm text-gray-700">
+            <li>• Centralized monitoring and alerting for covered systems</li>
+            <li>• Patch management and security updates on a defined schedule</li>
+            <li>• Baseline configuration standards for devices and network gear</li>
+            <li>• Documentation of network, endpoints, and critical services</li>
+            <li>• A direct contact for support and escalation</li>
+          </ul>
+        </motion.div>
+
+        <motion.div
+          className="space-y-4 bg-gray-50 border rounded-2xl p-6"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
-          Schedule a Consultation
-        </a>
+          <h2 className="text-2xl font-semibold flex items-center gap-2">
+            <KeyRound className="w-6 h-6 text-blue-600" />
+            Getting Pricing And Next Steps
+          </h2>
+          <p className="text-sm text-gray-700">
+            Pricing is based on the number of users, devices, and the scope of systems under
+            management. Email a quick overview of your environment and we will respond with options.
+          </p>
+          <div className="space-y-2 text-sm text-gray-700">
+            <p>Include as much of this as you can:</p>
+            <ul className="space-y-1">
+              <li>• Number of users and endpoints</li>
+              <li>• Servers, line-of-business apps, or special systems</li>
+              <li>• Current backup and security tools, if any</li>
+              <li>• Locations and any remote workers</li>
+            </ul>
+          </div>
+          <a
+            href="mailto:sales@gntsecurity.com"
+            className="inline-block mt-3 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+          >
+            Email Sales For Pricing
+          </a>
+        </motion.div>
       </section>
     </div>
   );
