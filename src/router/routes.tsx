@@ -1,11 +1,4 @@
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Procezly from "../pages/Procezly";
-import Services from "../pages/Services";
-import Contact from "../pages/Contact";
-import GitHub from "../pages/GitHub";
-import NotFound from "../pages/NotFound";
-import SLA from "../pages/SLA";
+import HardwareProcurement from "../pages/HardwareProcurement";
 
 export const routes = [
   { path: "/", element: <Home /> },
@@ -15,5 +8,12 @@ export const routes = [
   { path: "/procezly", element: <Procezly /> },
   { path: "/GitHub", element: <GitHub /> },
   { path: "/sla", element: <SLA /> },
+  { path: "/onboarding", element: <Onboarding /> },
+  { path: "/remote-support", element: <RemoteSupport /> },
+  { path: "/ohio-it-support", element: <OhioITSupport /> },
+  { path: "/incident-response", element: <IncidentResponse /> },
+  { path: "/home-it-support", element: <ManagedHomeIT /> },
+  { path: "/security-standards", element: <SecurityStandards /> },
+  { path: "/hardware-procurement", element: <HardwareProcurement /> },
   { path: "*", element: <NotFound /> },
 ];
