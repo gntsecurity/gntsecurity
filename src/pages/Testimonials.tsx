@@ -91,7 +91,7 @@ export default function Testimonials() {
             <Users className="w-8 h-8" />
             <div>
               <p className="font-semibold">Multi-Site Organization</p>
-              <p className="text-sm text-gray-500">Several Ohio locations</p>
+              <p className="text-sm text-gray-500">Multiple locations</p>
             </div>
           </div>
           <Quote className="w-8 h-8 text-gray-400" />
