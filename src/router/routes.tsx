@@ -20,6 +20,8 @@ import EmailSecurityExpectations from "../pages/EmailSecurityExpectations";
 import CustomerResourceLibrary from "../pages/CustomerResourceLibrary";
 import Testimonials from "../pages/Testimonials";
 import Careers from "../pages/Careers";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import Terms from "../pages/Terms";
 
 export const routes = [
   { path: "/", element: <Home /> },
@@ -55,5 +57,7 @@ export const routes = [
   },
   { path: "/testimonials", element: <Testimonials /> },
   { path: "/careers", element: <Careers /> },
+  { path: "/privacy-policy", element: <PrivacyPolicy /> },
+  { path: "/terms", element: <Terms /> },
   { path: "*", element: <NotFound /> },
 ];
