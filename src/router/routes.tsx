@@ -20,6 +20,7 @@ import EmailSecurityExpectations from "../pages/EmailSecurityExpectations";
 import CustomerResourceLibrary from "../pages/CustomerResourceLibrary";
 import Testimonials from "../pages/Testimonials";
 import Careers from "../pages/Careers";
+import EnglewoodPrinterDrivers from "../pages/EnglewoodPrinterDrivers";
 
 export const routes = [
   { path: "/", element: <Home /> },
@@ -53,6 +54,7 @@ export const routes = [
     path: "/customer-resource-library",
     element: <CustomerResourceLibrary />,
   },
+  { path: "/englewood-printer-drivers", element: <EnglewoodPrinterDrivers /> },
   { path: "/testimonials", element: <Testimonials /> },
   { path: "/careers", element: <Careers /> },
   { path: "*", element: <NotFound /> },
