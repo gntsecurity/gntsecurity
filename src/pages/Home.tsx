@@ -19,7 +19,7 @@ export default function Home() {
           transition={{ duration: 0.7 }}
         >
           Managed IT & Cybersecurity{" "}
-          <span className="text-blue-600">for Ohio Businesses & Homes</span>
+          <span className="text-blue-600">for Businesses & Homes</span>
         </motion.h1>
         <motion.p
           className="text-lg text-gray-700"
@@ -29,6 +29,16 @@ export default function Home() {
         >
           GNT Security delivers fully managed IT, endpoint security, network support, and
           reliable helpdesk so you do not have to think about technology at all.
+        </motion.p>
+        <motion.p
+          className="text-base text-gray-600"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+        >
+          Based in Ohio, supporting organizations regionally and across the U.S. with
+          remote-first managed services. On-site work is scheduled with planning, and we
+          coordinate trusted partners when local, same-day coverage is required.
         </motion.p>
         <motion.div
           className="flex flex-wrap justify-center gap-4 pt-4"
@@ -55,7 +65,8 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.5 }}
         >
-          Serving Ohio businesses and home IT needs. Remote support available.
+          Remote-first support with planned travel and partner coverage when on-site service
+          is needed.
         </motion.p>
       </section>
 
@@ -79,7 +90,7 @@ export default function Home() {
           {
             icon: <Zap className="w-8 h-8 text-blue-600" />,
             title: "Responsive Support",
-            desc: "Helpdesk for day-to-day issues and onsite support options when needed.",
+            desc: "Helpdesk for day-to-day issues and on-site support options when needed.",
           },
         ].map(({ icon, title, desc }, i) => (
           <motion.div

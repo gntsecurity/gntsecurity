@@ -19,8 +19,9 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          GNT Security is a security-driven Managed Service Provider focused on keeping Ohio
-          businesses and homes secure, online, and supported.
+          GNT Security is a security-driven Managed Service Provider based in Ohio, focused on
+          keeping businesses and homes secure, online, and supported with remote-first services
+          and planned on-site work when it is needed.
         </motion.p>
       </section>
 
@@ -77,7 +78,11 @@ export default function About() {
           </ul>
           <div className="rounded-2xl bg-gray-50 border p-4 text-sm text-gray-700">
             <p className="font-semibold text-gray-900 mb-2">Service Area</p>
-            <p>Serving Ohio businesses and home IT needs with remote and onsite options.</p>
+            <p>
+              Based in Ohio with a remote-first model, serving clients regionally and across the
+              United States. On-site visits are scheduled with appropriate planning, and we work
+              with trusted providers for local coverage when necessary.
+            </p>
           </div>
         </motion.div>
       </section>
