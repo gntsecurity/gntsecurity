@@ -251,8 +251,8 @@ export default function EnglewoodPrinterDrivers() {
           <div className="space-y-2 text-sm text-gray-800">
             <p>
               Phone:{" "}
-              <a href="tel:+19376715597" className="text-blue-600 hover:underline">
-                937.671.5597
+              <a href="tel:+15104690947" className="text-blue-600 hover:underline">
+                (510) 469-0947
               </a>
             </p>
             <p>

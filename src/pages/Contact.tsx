@@ -36,8 +36,8 @@ export default function Contact() {
             <div className="space-y-1 text-sm text-gray-700">
               <p>
                 <span className="font-semibold text-gray-900">Phone:</span>{" "}
-                <a href="tel:+19376715597" className="text-blue-600 hover:underline">
-                  937.671.5597
+                <a href="tel:+15104690947" className="text-blue-600 hover:underline">
+                  (510) 469-0947
                 </a>
               </p>
               <p>

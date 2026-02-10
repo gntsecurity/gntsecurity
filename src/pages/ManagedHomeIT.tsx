@@ -151,11 +151,11 @@ export default function ManagedHomeIT() {
             Email Sales For Pricing
           </a>
           <a
-            href="tel:+19376715597"
+            href="tel:+15104690947"
             className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-lg font-medium text-gray-800 hover:bg-gray-100 transition"
           >
             <PhoneCall className="w-4 h-4 text-gray-800" />
-            Call 937.671.5597
+            Call (510) 469-0947
           </a>
         </div>
       </section>
