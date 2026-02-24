@@ -142,7 +142,7 @@ export default function Onboarding() {
             <li>• Support contact details and expectations</li>
             <li>• How to report incidents or suspicious activity</li>
             <li>• Onboarding steps for new hires</li>
-            <li>• Simple checklists for home and remote setups</li>
+            <li>• Simple checklists for remote setups</li>
           </ul>
         </motion.div>
       </section>

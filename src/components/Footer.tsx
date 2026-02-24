@@ -38,7 +38,7 @@ export default function Footer() {
                 <div>United States</div>
               </div>
               <p className="text-xs text-gray-500 mt-3">
-                Managed IT, cybersecurity, and network support with remote service available.
+                Managed IT, cybersecurity, and network support.
               </p>
             </div>
 

@@ -19,7 +19,7 @@ export default function Home() {
           transition={{ duration: 0.7 }}
         >
           Managed IT & Cybersecurity{" "}
-          <span className="text-blue-600">for Businesses & Homes</span>
+          <span className="text-blue-600">for Businesses</span>
         </motion.h1>
         <motion.p
           className="text-lg text-gray-700"
@@ -35,10 +35,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-        >
-          Based in Ohio, supporting organizations regionally and across the U.S. with
-          remote-first managed services. On-site work is scheduled with planning, and we
-          coordinate trusted partners when local, same-day coverage is required.
+        >          Built for reliability, security, and scalability—so your team can stay focused while we handle the systems behind the scenes.
         </motion.p>
         <motion.div
           className="flex flex-wrap justify-center gap-4 pt-4"
@@ -134,7 +131,7 @@ export default function Home() {
               <li>• VPN and secure remote access</li>
               <li>• Backup and disaster recovery</li>
               <li>• Hardware lifecycle planning</li>
-              <li>• Home office and small office setups</li>
+              <li>• Remote work and branch office setups</li>
             </ul>
           </div>
         </motion.div>

@@ -103,7 +103,7 @@ export default function AcceptableUse() {
             <h2 className="text-xl font-semibold">Acceptable Use Guidelines</h2>
           </div>
           <ul className="space-y-2 text-sm text-gray-700">
-            <li>• Use devices in line with business or agreed home use</li>
+            <li>• Use devices in line with business or approved personal use</li>
             <li>• Follow provided instructions for backups and updates</li>
             <li>• Report unusual behavior, pop-ups, or warnings quickly</li>
             <li>• Ask before installing new system-level utilities or tools</li>

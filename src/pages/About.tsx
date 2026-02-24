@@ -19,9 +19,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          GNT Security is a security-driven Managed Service Provider based in Ohio, focused on
-          keeping businesses and homes secure, online, and supported with remote-first services
-          and planned on-site work when it is needed.
+          GNT Security is a security-driven Managed Service Provider focused on keeping businesses secure, online, and supported with proactive management and clear processes.
         </motion.p>
       </section>
 
@@ -50,10 +48,10 @@ export default function About() {
               <p>• Clear documentation and repeatable processes</p>
             </div>
             <div className="space-y-2">
-              <p className="font-semibold text-gray-900">For Home Users</p>
-              <p>• Clean, secure home networks and Wi-Fi</p>
-              <p>• Protected devices for family and work-from-home</p>
-              <p>• Backup and recovery when something breaks</p>
+              <p className="font-semibold text-gray-900">For Leadership</p>
+              <p>• Roadmaps, lifecycle planning, and budgeting support</p>
+              <p>• Vendor coordination and escalation management</p>
+              <p>• Security posture reviews and policy alignment</p>
             </div>
           </div>
         </motion.div>
@@ -78,12 +76,7 @@ export default function About() {
           </ul>
           <div className="rounded-2xl bg-gray-50 border p-4 text-sm text-gray-700">
             <p className="font-semibold text-gray-900 mb-2">Service Area</p>
-            <p>
-              Based in Ohio with a remote-first model, serving clients regionally and across the
-              United States. On-site visits are scheduled with appropriate planning, and we work
-              with trusted providers for local coverage when necessary.
-            </p>
-          </div>
+            </div>
         </motion.div>
       </section>
 

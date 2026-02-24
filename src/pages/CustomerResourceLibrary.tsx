@@ -27,7 +27,7 @@ export default function CustomerResourceLibrary() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          A central home for guides, policies, and how-to resources for your staff.
+          A central hub for guides, policies, and how-to resources for your staff.
         </motion.p>
       </section>
 

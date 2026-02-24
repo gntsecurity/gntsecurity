@@ -76,9 +76,7 @@ export default function Terms() {
           3. Eligibility And Customer Type
         </h2>
         <p className="text-gray-700 text-sm md:text-base">
-          We primarily serve organizations, including businesses and similar entities. In some
-          cases we also support home offices or residential environments associated with our
-          business clients (for example, owners, executives, or remote staff).
+          We serve organizations, including businesses and similar entities.
         </p>
         <p className="text-gray-700 text-sm md:text-base">
           By engaging our services, you represent that you are authorized to act on behalf of
@@ -342,9 +340,7 @@ export default function Terms() {
           14. Governing Law
         </h2>
         <p className="text-gray-700 text-sm md:text-base">
-          These Terms are governed by the laws of the State of Ohio and the United States of
-          America, without regard to conflict of law principles, except where another
-          jurisdiction&apos;s law is required by applicable regulation or written agreement.
+          These Terms are governed by applicable law, without regard to conflict of law principles, except where another jurisdiction's law is required by applicable regulation or written agreement.
         </p>
       </section>
 

@@ -18,7 +18,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Serving Ohio businesses and home IT needs. Reach out with issues, projects, or questions
+          Serving business IT needs. Reach out with issues, projects, or questions
           about managed service plans.
         </motion.p>
       </section>
@@ -57,7 +57,7 @@ export default function Contact() {
           </div>
           <div className="text-sm text-gray-700">
             <p className="font-semibold text-gray-900 mb-1">Service Area</p>
-            <p>Onsite availability within Ohio where reasonable. Remote support is available more broadly.</p>
+            <p>On-site availability is scheduled where reasonable. Remote support is available more broadly.</p>
           </div>
         </motion.div>
 
@@ -108,7 +108,7 @@ export default function Contact() {
               rows={5}
               required
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Number of devices, type of business or home setup, what is going wrong, and any deadlines."
+              placeholder="Number of devices, type of environment, what is going wrong, and any deadlines."
             />
           </div>
           <button

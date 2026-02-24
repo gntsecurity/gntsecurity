@@ -28,8 +28,8 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          One provider for endpoints, networks, backups, cloud, and security. Designed for Ohio
-          businesses and home environments that cannot afford downtime.
+          One provider for endpoints, networks, backups, cloud, and security. Designed for
+          businesses that cannot afford downtime.
         </motion.p>
       </section>
 
@@ -97,7 +97,7 @@ export default function Services() {
               "New office and move projects",
               "Network redesign and cleanup",
               "Hardware refresh planning",
-              "Home lab and home office builds",
+              "Remote work enablement and secure access",
               "Security and configuration reviews",
             ],
           },
