@@ -1,8 +1,23 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Building2, Users } from "lucide-react";
 
+function useNoIndex() {
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex,nofollow";
+    document.head.appendChild(meta);
+    return () => {
+      document.head.removeChild(meta);
+    };
+  }, []);
+}
+
 export default function Customers() {
+  useNoIndex();
+
   return (
     <div className="space-y-16">
       <section className="text-center max-w-4xl mx-auto space-y-5 pt-16">
@@ -53,9 +68,7 @@ export default function Customers() {
                   <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-700 transition">
                     AACT
                   </h3>
-                  <p className="text-sm text-gray-700">
-                    Contacts and customer-specific details.
-                  </p>
+                  <p className="text-sm text-gray-700">Contacts and customer-specific details.</p>
                 </div>
                 <div className="shrink-0 rounded-xl border bg-gray-50 p-3">
                   <Building2 className="w-6 h-6 text-blue-600" />

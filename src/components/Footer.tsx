@@ -32,10 +32,16 @@ export default function Footer() {
           <div className="space-y-4">
             <div>
               <p className="text-sm font-semibold text-gray-900">GNT Security</p>
-              <p className="text-xs text-gray-500">
-                Managed IT, cybersecurity, and network support for Ohio businesses and home users.
+              <div className="text-xs text-gray-500 leading-relaxed mt-1">
+                <div>495 Jackson Street #1130</div>
+                <div>Oakland, CA 94607</div>
+                <div>United States</div>
+              </div>
+              <p className="text-xs text-gray-500 mt-3">
+                Managed IT, cybersecurity, and network support with remote service available.
               </p>
             </div>
+
             <div className="text-sm text-gray-700 space-y-1">
               <p>
                 <span className="font-semibold text-gray-900">Sales & General:</span>{" "}
@@ -52,15 +58,10 @@ export default function Footer() {
                   (510) 469-0947
                 </a>
               </p>
-              <p className="text-xs text-gray-500">
-                Serving Ohio businesses and home IT needs with remote support available.
-              </p>
             </div>
+
             <div className="text-xs text-gray-500">
-              <a
-                href="/procezly"
-                className="text-gray-500 hover:text-blue-600 hover:underline"
-              >
+              <a href="/procezly" className="text-gray-500 hover:text-blue-600 hover:underline">
                 Procezly – workflow platform built by GNT Security
               </a>
             </div>

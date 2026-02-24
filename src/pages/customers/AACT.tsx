@@ -1,7 +1,22 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, User } from "lucide-react";
 
+function useNoIndex() {
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex,nofollow";
+    document.head.appendChild(meta);
+    return () => {
+      document.head.removeChild(meta);
+    };
+  }, []);
+}
+
 export default function AACT() {
+  useNoIndex();
+
   return (
     <div className="space-y-20">
       <section className="text-center max-w-4xl mx-auto space-y-5 pt-16">
@@ -96,9 +111,7 @@ export default function AACT() {
 
             <div className="rounded-2xl border p-6">
               <p className="text-sm font-semibold text-gray-900 mb-2">Location details</p>
-              <p className="text-sm text-gray-700">
-                Location and site information will be added here later.
-              </p>
+              <p className="text-sm text-gray-700">Location and site information will be added here later.</p>
             </div>
           </motion.div>
         </div>

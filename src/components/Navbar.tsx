@@ -1,11 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Info, Wrench, Phone, Users } from "lucide-react";
+import { Home, Info, Wrench, Phone } from "lucide-react";
 
 const navItems = [
   { name: "Home", path: "/", icon: Home },
   { name: "About", path: "/about", icon: Info },
   { name: "Services", path: "/services", icon: Wrench },
-  { name: "Customers", path: "/customers", icon: Users },
   { name: "Contact", path: "/contact", icon: Phone },
 ];
 
@@ -18,16 +17,10 @@ export default function Navbar() {
       <header className="border-b bg-white">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img
-              src="/logo.png"
-              alt="GNT Security"
-              className="h-8 w-auto"
-            />
+            <img src="/logo.png" alt="GNT Security" className="h-8 w-auto" />
             <div className="hidden sm:flex flex-col leading-tight">
               <span className="font-semibold text-sm">GNT Security</span>
-              <span className="text-xs text-gray-500">
-                Managed IT & Cybersecurity – Ohio
-              </span>
+              <span className="text-xs text-gray-500">Managed IT & Cybersecurity</span>
             </div>
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm">
