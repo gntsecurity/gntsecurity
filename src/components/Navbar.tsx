@@ -1,10 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Info, Wrench, Phone } from "lucide-react";
+import { Home, Info, Wrench, Phone, Users } from "lucide-react";
 
 const navItems = [
   { name: "Home", path: "/", icon: Home },
   { name: "About", path: "/about", icon: Info },
   { name: "Services", path: "/services", icon: Wrench },
+  { name: "Customers", path: "/customers", icon: Users },
   { name: "Contact", path: "/contact", icon: Phone },
 ];
 

@@ -21,6 +21,8 @@ import CustomerResourceLibrary from "../pages/CustomerResourceLibrary";
 import Testimonials from "../pages/Testimonials";
 import Careers from "../pages/Careers";
 import EnglewoodPrinterDrivers from "../pages/EnglewoodPrinterDrivers";
+import Customers from "../pages/Customers";
+import AACT from "../pages/customers/AACT";
 
 export const routes = [
   { path: "/", element: <Home /> },
@@ -57,5 +59,7 @@ export const routes = [
   { path: "/englewood-printer-drivers", element: <EnglewoodPrinterDrivers /> },
   { path: "/testimonials", element: <Testimonials /> },
   { path: "/careers", element: <Careers /> },
+  { path: "/customers", element: <Customers /> },
+  { path: "/customers/AACT", element: <AACT /> },
   { path: "*", element: <NotFound /> },
 ];
