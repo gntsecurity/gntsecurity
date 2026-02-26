@@ -1,70 +1,75 @@
 import { motion } from "framer-motion";
-import {
-  ShieldCheck,
-  Server,
-  Zap,
-  BarChart3,
-  Wifi,
-  PhoneCall,
-} from "lucide-react";
+import { Link } from "react-router-dom";
+import { ShieldCheck, Server, Zap, BarChart3, Wifi, PhoneCall } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="space-y-32">
-      <section className="pt-24 text-center max-w-4xl mx-auto space-y-6">
-        <motion.h1
-          className="text-5xl md:text-6xl font-extrabold leading-tight"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          Managed IT & Cybersecurity{" "}
-          <span className="text-blue-600">for Businesses</span>
-        </motion.h1>
-        <motion.p
-          className="text-lg text-gray-700"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          GNT Security delivers fully managed IT, endpoint security, network support, and
-          reliable helpdesk so you do not have to think about technology at all.
-        </motion.p>
-        <motion.p
-          className="text-base text-gray-600"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-        >          Built for reliability, security, and scalability—so your team can stay focused while we handle the systems behind the scenes.
-        </motion.p>
-        <motion.div
-          className="flex flex-wrap justify-center gap-4 pt-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-        >
-          <a
-            href="mailto:sales@gntsecurity.com"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+      <section className="relative overflow-hidden bg-white">
+        <div className="absolute inset-0 pointer-events-none hero-plus-pattern opacity-20" />
+        <div className="absolute top-[-140px] left-1/2 -translate-x-1/2 w-[900px] h-[520px] bg-blue-100 blur-3xl opacity-20 pointer-events-none" />
+
+        <div className="pt-24 text-center max-w-4xl mx-auto space-y-6 relative">
+          <motion.h1
+            className="text-5xl md:text-6xl font-extrabold leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
           >
-            Email Sales For Pricing
-          </a>
-          <a
-            href="/services"
-            className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-100 transition"
+            Managed IT & Cybersecurity{" "}
+            <span className="text-blue-600">for Businesses</span>
+          </motion.h1>
+
+          <motion.p
+            className="text-lg text-gray-700"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
           >
-            View Managed Services
-          </a>
-        </motion.div>
-        <motion.p
-          className="text-sm text-gray-500 pt-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
-        >
-          Remote-first support with planned travel and partner coverage when on-site service
-          is needed.
-        </motion.p>
+            GNT Security delivers fully managed IT, endpoint security, network support, and reliable
+            helpdesk so you do not have to think about technology at all.
+          </motion.p>
+
+          <motion.p
+            className="text-base text-gray-600"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            Built for reliability, security, and scalability—so your team can stay focused while we
+            handle the systems behind the scenes.
+          </motion.p>
+
+          <motion.div
+            className="flex flex-wrap justify-center gap-4 pt-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
+            <a
+              href="mailto:sales@gntsecurity.com"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+            >
+              Email Sales For Pricing
+            </a>
+            <Link
+              to="/services"
+              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-100 transition"
+            >
+              View Managed Services
+            </Link>
+          </motion.div>
+
+          <motion.p
+            className="text-sm text-gray-500 pt-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
+          >
+            Remote-first support with planned travel and partner coverage when on-site service is
+            needed.
+          </motion.p>
+        </div>
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -152,18 +157,13 @@ export default function Home() {
             You get status, alerts, and recommendations without having to log into ten different
             dashboards.
           </p>
-          <div className="grid grid-cols-2 gap-4 text-xs text-gray-600">
+
+          <div className="grid grid-cols-1 gap-3 text-xs text-gray-600">
             <div className="space-y-1">
-              <p className="font-semibold text-gray-800">For Businesses</p>
+              <p className="font-semibold text-gray-800">Built For Businesses</p>
               <p>• Offices, retail, warehouses, remote staff</p>
               <p>• Policy-driven security and access</p>
               <p>• Standardized builds and documentation</p>
-            </div>
-            <div className="space-y-1">
-              <p className="font-semibold text-gray-800">For Home Users</p>
-              <p>• Secure home networks and Wi-Fi</p>
-              <p>• Parental controls and content filtering</p>
-              <p>• Backup and device cleanup services</p>
             </div>
           </div>
         </motion.div>
