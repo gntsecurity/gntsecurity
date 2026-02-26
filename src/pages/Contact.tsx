@@ -1,6 +1,59 @@
 import { motion } from "framer-motion";
+import { useMemo, useState } from "react";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [details, setDetails] = useState("");
+  const [website, setWebsite] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const canSubmit = useMemo(() => {
+    if (status === "sending") return false;
+    if (!name.trim()) return false;
+    if (!email.trim()) return false;
+    if (!subject.trim()) return false;
+    if (!details.trim()) return false;
+    return true;
+  }, [details, email, name, status, subject]);
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!canSubmit) return;
+    setStatus("sending");
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message: details, website }),
+      });
+
+      const data = (await res.json().catch(() => null)) as
+        | { ok?: boolean; error?: string }
+        | null;
+
+      if (!res.ok || !data?.ok) {
+        setStatus("error");
+        setErrorMessage(data?.error || "Something went wrong. Please email sales@gntsecurity.com.");
+        return;
+      }
+
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setSubject("");
+      setDetails("");
+      setWebsite("");
+    } catch {
+      setStatus("error");
+      setErrorMessage("Something went wrong. Please email sales@gntsecurity.com.");
+    }
+  }
+
   return (
     <div className="space-y-24">
       <section className="text-center max-w-4xl mx-auto pt-20 space-y-6">
@@ -67,17 +120,31 @@ export default function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          onSubmit={onSubmit}
         >
           <h2 className="text-xl font-semibold mb-2">Send A Message</h2>
           <p className="text-sm text-gray-600 mb-4">
             Use this form to describe your environment, issue, or project. You will receive a reply
             from GNT Security directly.
           </p>
+
+          <input
+            type="text"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+            autoComplete="off"
+            tabIndex={-1}
+            className="hidden"
+            aria-hidden="true"
+          />
+
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
             <input
               type="text"
               required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Your name"
             />
@@ -87,6 +154,8 @@ export default function Contact() {
             <input
               type="email"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="you@example.com"
             />
@@ -96,6 +165,8 @@ export default function Contact() {
             <input
               type="text"
               required
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Support request, project, or question"
             />
@@ -107,15 +178,31 @@ export default function Contact() {
             <textarea
               rows={5}
               required
+              value={details}
+              onChange={(e) => setDetails(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Number of devices, type of environment, what is going wrong, and any deadlines."
             />
           </div>
+
+          {status === "success" ? (
+            <div className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">
+              Message received. You will get a reply soon.
+            </div>
+          ) : null}
+
+          {status === "error" ? (
+            <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+              {errorMessage}
+            </div>
+          ) : null}
+
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"
+            disabled={!canSubmit}
+            className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Submit
+            {status === "sending" ? "Sending..." : "Submit"}
           </button>
           <p className="text-xs text-gray-500">
             Submitting this form does not create a support contract yet. GNT Security will respond
