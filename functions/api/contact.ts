@@ -1,6 +1,9 @@
 export interface Env {
   CONTACT_TO?: string;
-  CONTACT_FROM?: string;
+  GRAPH_SENDER?: string;
+  TENANT_ID?: string;
+  CLIENT_ID?: string;
+  CLIENT_SECRET?: string;
 }
 
 function json(status: number, body: unknown) {
@@ -27,15 +30,52 @@ async function readJson(req: Request) {
   }
 }
 
-async function sendMailchannels(payload: unknown) {
-  const res = await fetch("https://api.mailchannels.net/tx/v1/send", {
+async function getGraphToken(env: Env) {
+  const tenantId = env.TENANT_ID || "";
+  const clientId = env.CLIENT_ID || "";
+  const clientSecret = env.CLIENT_SECRET || "";
+  if (!tenantId || !clientId || !clientSecret) {
+    throw new Error("missing_graph_env");
+  }
+
+  const tokenUrl = `https://login.microsoftonline.com/${encodeURIComponent(tenantId)}/oauth2/v2.0/token`;
+  const form = new URLSearchParams();
+  form.set("client_id", clientId);
+  form.set("client_secret", clientSecret);
+  form.set("grant_type", "client_credentials");
+  form.set("scope", "https://graph.microsoft.com/.default");
+
+  const res = await fetch(tokenUrl, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: form.toString(),
+  });
+
+  const data = (await res.json().catch(() => null)) as
+    | { access_token?: string; error?: string; error_description?: string }
+    | null;
+
+  if (!res.ok || !data?.access_token) {
+    throw new Error(`token_failed:${res.status}:${data?.error || ""}`);
+  }
+
+  return data.access_token;
+}
+
+async function graphSendMail(env: Env, token: string, sender: string, payload: unknown) {
+  const url = `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(sender)}/sendMail`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(payload),
   });
+
   if (!res.ok) {
     const t = await res.text().catch(() => "");
-    throw new Error(`mailchannels_failed:${res.status}:${t.slice(0, 200)}`);
+    throw new Error(`send_failed:${res.status}:${t.slice(0, 300)}`);
   }
 }
 
@@ -79,7 +119,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
   }
 
   const to = env.CONTACT_TO || "sales@gntsecurity.com";
-  const from = env.CONTACT_FROM || "no-reply@gntsecurity.com";
+  const sender = env.GRAPH_SENDER || "no-reply@gntsecurity.com";
 
   const text = [
     `New website contact form submission`,
@@ -97,15 +137,18 @@ export async function onRequest(context: { request: Request; env: Env }) {
   ].join("\n");
 
   const mail = {
-    personalizations: [{ to: [{ email: to }] }],
-    from: { email: from, name: "GNT Security Website" },
-    reply_to: { email, name },
-    subject: `[Website] ${subject}`,
-    content: [{ type: "text/plain", value: text }],
+    message: {
+      subject: `[Website] ${subject}`,
+      body: { contentType: "Text", content: text },
+      toRecipients: [{ emailAddress: { address: to } }],
+      replyTo: [{ emailAddress: { address: email, name } }],
+    },
+    saveToSentItems: false,
   };
 
   try {
-    await sendMailchannels(mail);
+    const token = await getGraphToken(env);
+    await graphSendMail(env, token, sender, mail);
     return json(200, { ok: true });
   } catch {
     return json(502, { ok: false, error: "Unable to send right now. Please email sales@gntsecurity.com." });
