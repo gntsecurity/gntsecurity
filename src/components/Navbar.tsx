@@ -1,10 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Info, Wrench, Phone } from "lucide-react";
+import { Home, Info, Wrench, Phone, BookOpen } from "lucide-react";
 
 const navItems = [
   { name: "Home", path: "/", icon: Home },
   { name: "About", path: "/about", icon: Info },
   { name: "Services", path: "/services", icon: Wrench },
+  { name: "Resources", path: "/customer-resource-library", icon: BookOpen },
   { name: "Contact", path: "/contact", icon: Phone },
 ];
 
@@ -23,6 +24,7 @@ export default function Navbar() {
               <span className="text-xs text-gray-500">Managed IT & Cybersecurity</span>
             </div>
           </Link>
+
           <nav className="hidden md:flex items-center space-x-6 text-sm">
             {navItems.map(({ name, path, icon: Icon }) => (
               <Link
@@ -51,7 +53,7 @@ export default function Navbar() {
           <Link
             key={name}
             to={path}
-            className={`flex flex-col items-center text-xs ${
+            className={`flex flex-col items-center text-[11px] ${
               pathname === path ? "text-blue-600" : "text-gray-500"
             }`}
           >
