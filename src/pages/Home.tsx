@@ -6,69 +6,168 @@ export default function Home() {
   return (
     <div className="space-y-32">
       <section className="relative overflow-hidden bg-white">
-        <div className="absolute inset-0 pointer-events-none hero-plus-pattern opacity-20" />
-        <div className="absolute top-[-140px] left-1/2 -translate-x-1/2 w-[900px] h-[520px] bg-blue-100 blur-3xl opacity-20 pointer-events-none" />
+        <div className="absolute inset-0 pointer-events-none hero-plus-pattern opacity-40" />
+        <div className="absolute top-[-160px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-100 blur-3xl opacity-20 pointer-events-none" />
 
-        <div className="pt-24 text-center max-w-4xl mx-auto space-y-6 relative">
-          <motion.h1
-            className="text-5xl md:text-6xl font-extrabold leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            Managed IT & Cybersecurity{" "}
-            <span className="text-blue-600">for Businesses</span>
-          </motion.h1>
+        <div className="max-w-6xl mx-auto px-4 pt-24 pb-20 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <motion.div
+                className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/70 backdrop-blur px-4 py-2 text-sm text-blue-700"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <ShieldCheck className="h-4 w-4" />
+                Security-driven managed services
+              </motion.div>
 
-          <motion.p
-            className="text-lg text-gray-700"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            GNT Security delivers fully managed IT, endpoint security, network support, and reliable
-            helpdesk so you do not have to think about technology at all.
-          </motion.p>
+              <motion.h1
+                className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-gray-900"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+              >
+                Managed IT & Cybersecurity{" "}
+                <span className="text-blue-600">for Businesses</span>
+              </motion.h1>
 
-          <motion.p
-            className="text-base text-gray-600"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-          >
-            Built for reliability, security, and scalability—so your team can stay focused while we
-            handle the systems behind the scenes.
-          </motion.p>
+              <motion.p
+                className="text-lg text-gray-700 max-w-xl"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              >
+                GNT Security delivers fully managed IT, endpoint security, network support, and reliable
+                helpdesk so you do not have to think about technology at all.
+              </motion.p>
 
-          <motion.div
-            className="flex flex-wrap justify-center gap-4 pt-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-          >
-            <a
-              href="mailto:sales@gntsecurity.com"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+              <motion.p
+                className="text-base text-gray-600 max-w-xl"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+              >
+                Built for reliability, security, and scalability—so your team can stay focused while we
+                handle the systems behind the scenes.
+              </motion.p>
+
+              <motion.div
+                className="flex flex-wrap gap-4 pt-2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+              >
+                <a
+                  href="mailto:sales@gntsecurity.com"
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+                >
+                  Email Sales For Pricing
+                </a>
+                <Link
+                  to="/services"
+                  className="px-6 py-3 border border-gray-300 text-gray-800 rounded-lg font-semibold hover:bg-gray-50 transition"
+                >
+                  View Managed Services
+                </Link>
+              </motion.div>
+
+              <motion.div
+                className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-600 pt-3"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.55, duration: 0.5 }}
+              >
+                <span className="inline-flex items-center gap-2">
+                  <Zap className="h-4 w-4 text-blue-600" />
+                  Responsive support
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <Wifi className="h-4 w-4 text-blue-600" />
+                  Network + endpoints
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <Server className="h-4 w-4 text-blue-600" />
+                  Standardized management
+                </span>
+              </motion.div>
+
+              <motion.p
+                className="text-sm text-gray-500 pt-2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+              >
+                Remote-first support with planned travel and partner coverage when on-site service is
+                needed.
+              </motion.p>
+            </div>
+
+            <motion.div
+              className="bg-white/80 backdrop-blur border rounded-2xl shadow-lg p-6 md:p-8"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
             >
-              Email Sales For Pricing
-            </a>
-            <Link
-              to="/services"
-              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-100 transition"
-            >
-              View Managed Services
-            </Link>
-          </motion.div>
+              <div className="flex items-center gap-2 mb-6">
+                <div className="flex gap-2">
+                  <span className="h-3 w-3 rounded-full bg-red-400" />
+                  <span className="h-3 w-3 rounded-full bg-yellow-400" />
+                  <span className="h-3 w-3 rounded-full bg-green-400" />
+                </div>
+                <div className="ml-auto text-xs text-gray-500 border rounded-lg px-3 py-1 bg-white">
+                  portal.gntsecurity.com
+                </div>
+              </div>
 
-          <motion.p
-            className="text-sm text-gray-500 pt-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
-          >
-            Remote-first support with planned travel and partner coverage when on-site service is
-            needed.
-          </motion.p>
+              <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="border rounded-xl p-4 bg-white">
+                  <div className="text-xs text-gray-500">Active Alerts</div>
+                  <div className="text-2xl font-bold text-gray-900 mt-1">3</div>
+                </div>
+                <div className="border rounded-xl p-4 bg-white">
+                  <div className="text-xs text-gray-500">This Week</div>
+                  <div className="text-2xl font-bold text-gray-900 mt-1">14</div>
+                </div>
+                <div className="border rounded-xl p-4 bg-white">
+                  <div className="text-xs text-gray-500">Compliance</div>
+                  <div className="text-2xl font-bold text-gray-900 mt-1">98%</div>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <div className="border rounded-xl px-4 py-3 bg-white flex items-center justify-between">
+                  <div>
+                    <div className="text-xs text-gray-500">KC-001</div>
+                    <div className="text-sm font-semibold text-gray-900">Workstation Health Check</div>
+                  </div>
+                  <span className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-3 py-1">
+                    Complete
+                  </span>
+                </div>
+
+                <div className="border rounded-xl px-4 py-3 bg-white flex items-center justify-between">
+                  <div>
+                    <div className="text-xs text-gray-500">KC-002</div>
+                    <div className="text-sm font-semibold text-gray-900">Backup Verification</div>
+                  </div>
+                  <span className="text-xs font-semibold text-yellow-700 bg-yellow-50 border border-yellow-200 rounded-full px-3 py-1">
+                    Pending
+                  </span>
+                </div>
+
+                <div className="border rounded-xl px-4 py-3 bg-white flex items-center justify-between">
+                  <div>
+                    <div className="text-xs text-gray-500">KC-003</div>
+                    <div className="text-sm font-semibold text-gray-900">Firewall Review</div>
+                  </div>
+                  <span className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-3 py-1">
+                    Complete
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -157,7 +256,6 @@ export default function Home() {
             You get status, alerts, and recommendations without having to log into ten different
             dashboards.
           </p>
-
           <div className="grid grid-cols-1 gap-3 text-xs text-gray-600">
             <div className="space-y-1">
               <p className="font-semibold text-gray-800">Built For Businesses</p>
