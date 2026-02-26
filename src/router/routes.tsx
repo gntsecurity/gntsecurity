@@ -21,6 +21,8 @@ import Careers from "../pages/Careers";
 import EnglewoodPrinterDrivers from "../pages/EnglewoodPrinterDrivers";
 import Customers from "../pages/Customers";
 import AACT from "../pages/customers/AACT";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import Terms from "../pages/Terms";
 
 export const routes = [
   { path: "/", element: <Home /> },
@@ -32,29 +34,20 @@ export const routes = [
   { path: "/sla", element: <SLA /> },
   { path: "/onboarding", element: <Onboarding /> },
   { path: "/remote-support", element: <RemoteSupport /> },
-  { path: "/incident-response", element: <IncidentResponse /> },  { path: "/security-standards", element: <SecurityStandards /> },
+  { path: "/incident-response", element: <IncidentResponse /> },
+  { path: "/security-standards", element: <SecurityStandards /> },
   { path: "/hardware-procurement", element: <HardwareProcurement /> },
   { path: "/acceptable-use", element: <AcceptableUse /> },
-  {
-    path: "/business-continuity-disaster-recovery",
-    element: <BusinessContinuityDR />,
-  },
-  {
-    path: "/network-deployment-standards",
-    element: <NetworkDeploymentStandards />,
-  },
-  {
-    path: "/email-security-expectations",
-    element: <EmailSecurityExpectations />,
-  },
-  {
-    path: "/customer-resource-library",
-    element: <CustomerResourceLibrary />,
-  },
+  { path: "/business-continuity-disaster-recovery", element: <BusinessContinuityDR /> },
+  { path: "/network-deployment-standards", element: <NetworkDeploymentStandards /> },
+  { path: "/email-security-expectations", element: <EmailSecurityExpectations /> },
+  { path: "/customer-resource-library", element: <CustomerResourceLibrary /> },
   { path: "/englewood-printer-drivers", element: <EnglewoodPrinterDrivers /> },
   { path: "/testimonials", element: <Testimonials /> },
   { path: "/careers", element: <Careers /> },
   { path: "/customers", element: <Customers /> },
   { path: "/customers/AACT", element: <AACT /> },
+  { path: "/privacy-policy", element: <PrivacyPolicy /> },
+  { path: "/terms", element: <Terms /> },
   { path: "*", element: <NotFound /> },
 ];
