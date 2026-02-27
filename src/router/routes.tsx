@@ -18,7 +18,6 @@ import EmailSecurityExpectations from "../pages/EmailSecurityExpectations";
 import CustomerResourceLibrary from "../pages/CustomerResourceLibrary";
 import Testimonials from "../pages/Testimonials";
 import Careers from "../pages/Careers";
-import EnglewoodPrinterDrivers from "../pages/EnglewoodPrinterDrivers";
 import Customers from "../pages/Customers";
 import AACT from "../pages/customers/AACT";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
@@ -43,7 +42,7 @@ export const routes = [
   { path: "/network-deployment-standards", element: <NetworkDeploymentStandards /> },
   { path: "/email-security-expectations", element: <EmailSecurityExpectations /> },
   { path: "/customer-resource-library", element: <CustomerResourceLibrary /> },
-  { path: "/englewood-printer-drivers", element: <EnglewoodPrinterDrivers /> },
+  { path: "/englewood-printer-drivers", element: <NotFound /> },
   { path: "/testimonials", element: <Testimonials /> },
   { path: "/careers", element: <Careers /> },
   { path: "/customers", element: <Customers /> },
