@@ -79,6 +79,17 @@ export default function Footer() {
                 Procezly – workflow platform built by GNT Security
               </Link>
             </div>
+
+            <div className="text-xs text-gray-500">
+              <a
+                href="https://staff.gntsecurity.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-500 hover:text-blue-600 hover:underline"
+              >
+                Staff Portal
+              </a>
+            </div>
           </div>
 
           <div>
