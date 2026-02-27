@@ -56,7 +56,7 @@ img {
   }
 
   .gnt-card {
-    @apply rounded-3xl border border-slate-200/80 bg-white/85 backdrop-blur shadow-soft;
+   @apply rounded-3xl border border-slate-200/80 bg-white/80 backdrop-blur shadow-soft;
   }
 
   .gnt-card-solid {
