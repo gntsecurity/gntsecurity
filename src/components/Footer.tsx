@@ -12,6 +12,11 @@ export default function Footer() {
             <p className="text-sm text-slate-600">
               Serving clients nationwide.
             </p>
+            <div className="text-sm text-slate-600 space-y-1">
+              <div>495 Jackson Street #1130</div>
+              <div>Oakland, CA 94607</div>
+              <div>United States</div>
+            </div>
           </div>
 
           <div>
