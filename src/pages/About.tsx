@@ -77,6 +77,15 @@ export default function About() {
             </ul>
             <div className="gnt-card-solid p-6 text-sm text-slate-700">
               <p className="font-semibold text-slate-900 mb-2">Service Area</p>
+              <p>
+                High availability in <span className="font-semibold text-slate-900">Florida</span>,{" "}
+                <span className="font-semibold text-slate-900">Michigan</span>,{" "}
+                <span className="font-semibold text-slate-900">Ohio</span>, and{" "}
+                <span className="font-semibold text-slate-900">Texas</span> within the United States.
+              </p>
+              <p className="mt-2">
+                Remote and onsite support available nationwide.
+              </p>
             </div>
           </motion.div>
         </div>
