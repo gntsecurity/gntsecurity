@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="gnt-container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="space-y-4">
-            <div className="text-lg font-semibold text-slate-900">
-              GNT Security LLC
+            <div className="text-lg text-slate-900">
+             <span className="font-bold">GNT</span> Security LLC
             </div>
             <p className="text-sm text-slate-600">
               Serving clients nationwide.
