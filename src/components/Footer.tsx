@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-500">
-          © {new Date().getFullYear()} GNT Security. All rights reserved.
+          © {new Date().getFullYear()} GNT Security LLC. All rights reserved.
         </div>
       </div>
     </footer>
