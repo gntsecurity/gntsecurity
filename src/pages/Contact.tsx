@@ -89,7 +89,7 @@ export default function Contact() {
             <div className="space-y-1 text-sm text-gray-700">
               <p>
                 <span className="font-semibold text-gray-900">Phone:</span>{" "}
-                <a href="tel:+15104690947" className="text-blue-600 hover:underline">
+                <a href="tel:+15104690947" className="hover:underline">
                   (510) 469-0947
                 </a>
               </p>
@@ -97,7 +97,7 @@ export default function Contact() {
                 <span className="font-semibold text-gray-900">Sales & General:</span>{" "}
                 <a
                   href="mailto:sales@gntsecurity.com"
-                  className="text-blue-600 hover:underline break-all"
+                  className="hover:underline break-all"
                 >
                   sales@gntsecurity.com
                 </a>
@@ -115,7 +115,7 @@ export default function Contact() {
         </motion.div>
 
         <motion.form
-          className="space-y-6 bg-white border rounded-2xl p-8 shadow-md"
+          className="space-y-6 gnt-card-solid p-8"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -145,7 +145,7 @@ export default function Contact() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="gnt-input"
               placeholder="Your name"
             />
           </div>
@@ -156,7 +156,7 @@ export default function Contact() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="gnt-input"
               placeholder="you@example.com"
             />
           </div>
@@ -167,7 +167,7 @@ export default function Contact() {
               required
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="gnt-input"
               placeholder="Support request, project, or question"
             />
           </div>
@@ -180,7 +180,7 @@ export default function Contact() {
               required
               value={details}
               onChange={(e) => setDetails(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="gnt-input min-h-[140px]"
               placeholder="Number of devices, type of environment, what is going wrong, and any deadlines."
             />
           </div>
@@ -200,7 +200,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={!canSubmit}
-            className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full gnt-btn-brand py-3"
           >
             {status === "sending" ? "Sending..." : "Submit"}
           </button>

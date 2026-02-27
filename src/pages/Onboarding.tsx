@@ -40,7 +40,7 @@ export default function Onboarding() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <ClipboardList className="w-7 h-7 text-blue-600" />
+            <ClipboardList className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">1. Discovery Call</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -62,7 +62,7 @@ export default function Onboarding() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <Network className="w-7 h-7 text-blue-600" />
+            <Network className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">2. Environment Scan</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -84,7 +84,7 @@ export default function Onboarding() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <ShieldCheck className="w-7 h-7 text-blue-600" />
+            <ShieldCheck className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">3. Stabilize & Secure</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -108,7 +108,7 @@ export default function Onboarding() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <FileText className="w-6 h-6 text-blue-600" />
+            <FileText className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">4. Documentation & Standards</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -132,7 +132,7 @@ export default function Onboarding() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <Users className="w-6 h-6 text-blue-600" />
+            <Users className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">5. Go-Live With The Team</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -149,7 +149,7 @@ export default function Onboarding() {
 
       <section className="max-w-5xl mx-auto bg-white border rounded-2xl p-6 shadow-sm space-y-4 mb-16">
         <div className="flex items-center gap-3">
-          <RefreshCw className="w-6 h-6 text-blue-600" />
+          <RefreshCw className="h-6 w-6 text-slate-900" />
           <h2 className="text-xl font-semibold">6. Ongoing Management</h2>
         </div>
         <p className="text-sm text-gray-700">

@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
 
       <section className="space-y-6">
         <h2 className="flex items-center gap-2 text-2xl font-semibold">
-          <Shield className="w-6 h-6 text-blue-600" />
+          <Shield className="h-6 w-6 text-slate-900" />
           Scope
         </h2>
         <p className="text-gray-700 text-sm md:text-base">
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
 
       <section className="space-y-6">
         <h2 className="flex items-center gap-2 text-2xl font-semibold">
-          <Lock className="w-6 h-6 text-blue-600" />
+          <Lock className="h-6 w-6 text-slate-900" />
           Information We Collect
         </h2>
         <div className="space-y-4 text-gray-700 text-sm md:text-base">
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
 
       <section className="space-y-6">
         <h2 className="flex items-center gap-2 text-2xl font-semibold">
-          <Server className="w-6 h-6 text-blue-600" />
+          <Server className="h-6 w-6 text-slate-900" />
           How We Use Information
         </h2>
         <ul className="list-disc list-inside text-gray-700 text-sm md:text-base space-y-1">
@@ -99,7 +99,7 @@ export default function PrivacyPolicy() {
 
       <section className="space-y-6">
         <h2 className="flex items-center gap-2 text-2xl font-semibold">
-          <Globe2 className="w-6 h-6 text-blue-600" />
+          <Globe2 className="h-6 w-6 text-slate-900" />
           Sharing Information
         </h2>
         <p className="text-gray-700 text-sm md:text-base">
@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
 
       <section className="space-y-6">
         <h2 className="flex items-center gap-2 text-2xl font-semibold">
-          <Lock className="w-6 h-6 text-blue-600" />
+          <Lock className="h-6 w-6 text-slate-900" />
           Security And Retention
         </h2>
         <p className="text-gray-700 text-sm md:text-base">
@@ -127,7 +127,7 @@ export default function PrivacyPolicy() {
 
       <section className="space-y-6 pb-8">
         <h2 className="flex items-center gap-2 text-2xl font-semibold">
-          <Lock className="w-6 h-6 text-blue-600" />
+          <Lock className="h-6 w-6 text-slate-900" />
           Contact
         </h2>
         <p className="text-gray-700 text-sm md:text-base">
@@ -136,13 +136,13 @@ export default function PrivacyPolicy() {
         <ul className="text-gray-700 text-sm md:text-base space-y-1">
           <li>
             Email:{" "}
-            <a href="mailto:sales@gntsecurity.com" className="text-blue-600 hover:underline">
+            <a href="mailto:sales@gntsecurity.com" className="hover:underline">
               sales@gntsecurity.com
             </a>
           </li>
           <li>
             Phone:{" "}
-            <a href="tel:+15104690947" className="text-blue-600 hover:underline">
+            <a href="tel:+15104690947" className="hover:underline">
               (510) 469-0947
             </a>
           </li>

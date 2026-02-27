@@ -36,13 +36,13 @@ export default function Navbar() {
                     key={name}
                     to={path}
                     className={[
-                      "inline-flex items-center gap-2 rounded-xl px-3 py-2 transition",
+                      "group inline-flex items-center gap-2 rounded-xl px-3 py-2 transition",
                       active
-                        ? "bg-brand-50 text-brand-800"
+                        ? "bg-brand-50 text-brand-700"
                         : "text-slate-700 hover:bg-slate-50 hover:text-slate-900",
                     ].join(" ")}
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className={["h-5 w-5", active ? "text-brand-700" : "text-slate-900"].join(" ")} />
                     {name}
                   </Link>
                 );
@@ -65,11 +65,11 @@ export default function Navbar() {
                   key={name}
                   to={path}
                   className={[
-                    "flex flex-col items-center rounded-xl px-3 py-2 text-[11px] transition",
-                    active ? "text-brand-700" : "text-slate-500 hover:text-slate-700",
+                    "group flex flex-col items-center rounded-xl px-3 py-2 text-[11px] transition",
+                    active ? "text-brand-700" : "text-slate-600 hover:text-slate-900",
                   ].join(" ")}
                 >
-                  <Icon className="h-5 w-5 mb-1" />
+                  <Icon className={["h-5 w-5 mb-1", active ? "text-brand-700" : "text-slate-900"].join(" ")} />
                   {name}
                 </Link>
               );

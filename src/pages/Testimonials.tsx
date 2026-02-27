@@ -32,13 +32,13 @@ export default function Testimonials() {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center gap-3">
-            <Building2 className="w-8 h-8" />
+            <Building2 className="h-6 w-6 text-slate-900" />
             <div>
               <p className="font-semibold">Regional Professional Services Firm</p>
               <p className="text-sm text-gray-500">50–75 employees</p>
             </div>
           </div>
-          <Quote className="w-8 h-8 text-gray-400" />
+          <Quote className="h-6 w-6 text-slate-600" />
           <p className="text-gray-700">
             “We went from constant IT fires to a predictable environment. GNT standardized our networks and moved us
             to managed security tools without downtime.”
@@ -60,13 +60,13 @@ export default function Testimonials() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <div className="flex items-center gap-3">
-            <Shield className="w-8 h-8" />
+            <Shield className="h-6 w-6 text-slate-900" />
             <div>
               <p className="font-semibold">Compliance-Driven Organization</p>
               <p className="text-sm text-gray-500">Regulated industry</p>
             </div>
           </div>
-          <Quote className="w-8 h-8 text-gray-400" />
+          <Quote className="h-6 w-6 text-slate-600" />
           <p className="text-gray-700">
             “Their documentation and security baselines gave us confidence walking into audits. We finally have an IT
             partner that thinks about risk the way we do.”
@@ -88,13 +88,13 @@ export default function Testimonials() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="flex items-center gap-3">
-            <Users className="w-8 h-8" />
+            <Users className="h-6 w-6 text-slate-900" />
             <div>
               <p className="font-semibold">Multi-Site Organization</p>
               <p className="text-sm text-gray-500">Multiple locations</p>
             </div>
           </div>
-          <Quote className="w-8 h-8 text-gray-400" />
+          <Quote className="h-6 w-6 text-slate-600" />
           <p className="text-gray-700">
             “Rolling out standardized networks and centrally managed security tools at every location drastically
             reduced support noise and surprises.”

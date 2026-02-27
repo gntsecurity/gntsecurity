@@ -54,13 +54,13 @@ export default function AACT() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <User className="w-5 h-5 text-blue-600" />
+          <User className="h-5 w-5 text-slate-900" />
           <h2 className="text-2xl font-semibold">Primary Contact</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[380px,1fr] gap-10 items-start">
           <motion.div
-            className="bg-white border rounded-2xl shadow-md p-6"
+            className="gnt-card-solid p-6"
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -80,12 +80,12 @@ export default function AACT() {
 
             <div className="mt-6 space-y-3 text-sm text-gray-700">
               <div className="flex items-start gap-2">
-                <Mail className="w-4 h-4 text-blue-600 mt-0.5" />
+                <Mail className="h-4 w-4 text-slate-600 mt-0.5" />
                 <div className="min-w-0">
                   <p className="text-xs text-gray-500">Email</p>
                   <a
                     href="mailto:ZLaymon@gntsecurity.com"
-                    className="text-blue-600 hover:underline break-all font-semibold"
+                    className="hover:underline break-all font-semibold"
                   >
                     ZLaymon@gntsecurity.com
                   </a>

@@ -101,7 +101,7 @@ export default function CustomerResourceLibrary() {
           transition={{ duration: 0.6 }}
         >
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Laptop className="w-8 h-8 mt-1" />
+            <Laptop className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Role-Based Content</h3>
               <p className="text-gray-700">
@@ -110,7 +110,7 @@ export default function CustomerResourceLibrary() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Network className="w-8 h-8 mt-1" />
+            <Network className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Shared With Your Team</h3>
               <p className="text-gray-700">
@@ -119,7 +119,7 @@ export default function CustomerResourceLibrary() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <FileText className="w-8 h-8 mt-1" />
+            <FileText className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Always Current</h3>
               <p className="text-gray-700">
@@ -138,7 +138,7 @@ export default function CustomerResourceLibrary() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Search className="w-7 h-7 mt-1" />
+          <Search className="h-6 w-6 mt-1 text-slate-900" />
           <div>
             <h2 className="text-2xl font-semibold mb-2">Looking For Something Specific?</h2>
             <p className="text-gray-700">

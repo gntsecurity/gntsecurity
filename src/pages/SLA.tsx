@@ -107,7 +107,7 @@ export default function SLA() {
           transition={{ duration: 0.6 }}
         >
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Server className="w-8 h-8 mt-1" />
+            <Server className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Infrastructure Uptime</h3>
               <p className="text-gray-600">
@@ -118,7 +118,7 @@ export default function SLA() {
           </div>
 
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Wifi className="w-8 h-8 mt-1" />
+            <Wifi className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Network Reliability</h3>
               <p className="text-gray-600">
@@ -129,7 +129,7 @@ export default function SLA() {
           </div>
 
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Database className="w-8 h-8 mt-1" />
+            <Database className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Backup & Recovery</h3>
               <p className="text-gray-600">

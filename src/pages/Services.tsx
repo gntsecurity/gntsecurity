@@ -19,7 +19,7 @@ import {
 export default function Services() {
   const serviceCards = [
     {
-      icon: <ServerCog className="w-8 h-8 text-blue-600" />,
+      icon: <ServerCog className="h-6 w-6 text-slate-900" />,
       title: "Managed IT & Helpdesk",
       desc: [
         "Workstation and laptop management",
@@ -30,7 +30,7 @@ export default function Services() {
       ],
     },
     {
-      icon: <Shield className="w-8 h-8 text-blue-600" />,
+      icon: <Shield className="h-6 w-6 text-slate-900" />,
       title: "Cybersecurity Services",
       desc: [
         "Endpoint protection and EDR",
@@ -41,7 +41,7 @@ export default function Services() {
       ],
     },
     {
-      icon: <Wifi className="w-8 h-8 text-blue-600" />,
+      icon: <Wifi className="h-6 w-6 text-slate-900" />,
       title: "Network & Wi-Fi",
       desc: [
         "Secure Wi-Fi and guest networks",
@@ -52,7 +52,7 @@ export default function Services() {
       ],
     },
     {
-      icon: <HardDrive className="w-8 h-8 text-blue-600" />,
+      icon: <HardDrive className="h-6 w-6 text-slate-900" />,
       title: "Backup & Business Continuity",
       desc: [
         "Workstation and server backups",
@@ -63,7 +63,7 @@ export default function Services() {
       ],
     },
     {
-      icon: <Cloud className="w-8 h-8 text-blue-600" />,
+      icon: <Cloud className="h-6 w-6 text-slate-900" />,
       title: "Cloud & Productivity",
       desc: [
         "Email and productivity platform management",
@@ -74,7 +74,7 @@ export default function Services() {
       ],
     },
     {
-      icon: <Wrench className="w-8 h-8 text-blue-600" />,
+      icon: <Wrench className="h-6 w-6 text-slate-900" />,
       title: "Projects & Consulting",
       desc: [
         "New office and move projects",
@@ -155,7 +155,7 @@ export default function Services() {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl font-semibold flex items-center gap-2">
-            <Cpu className="w-6 h-6 text-blue-600" />
+            <Cpu className="h-6 w-6 text-slate-900" />
             What Every Managed Client Receives
           </h2>
           <ul className="space-y-2 text-sm text-gray-700">
@@ -168,7 +168,7 @@ export default function Services() {
 
           <div className="pt-6 space-y-3">
             <h3 className="text-lg font-semibold flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-blue-600" />
+              <BookOpen className="h-5 w-5 text-slate-900" />
               Operational Pages
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -181,7 +181,7 @@ export default function Services() {
                     className="border rounded-2xl p-4 bg-white hover:bg-gray-50 transition space-y-1"
                   >
                     <div className="flex items-center gap-2">
-                      <Icon className="w-5 h-5 text-blue-600" />
+                      <Icon className="h-5 w-5 text-slate-900" />
                       <div className="font-semibold text-sm text-gray-900">{l.title}</div>
                     </div>
                     <div className="text-xs text-gray-600">{l.desc}</div>
@@ -200,7 +200,7 @@ export default function Services() {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl font-semibold flex items-center gap-2">
-            <KeyRound className="w-6 h-6 text-blue-600" />
+            <KeyRound className="h-6 w-6 text-slate-900" />
             Getting Pricing And Next Steps
           </h2>
           <p className="text-sm text-gray-700">

@@ -102,7 +102,7 @@ export default function Careers() {
           transition={{ duration: 0.6 }}
         >
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Target className="w-8 h-8 mt-1" />
+            <Target className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Growth &amp; Development</h3>
               <p className="text-gray-700">
@@ -112,7 +112,7 @@ export default function Careers() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <GraduationCap className="w-8 h-8 mt-1" />
+            <GraduationCap className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Early-Career Talent</h3>
               <p className="text-gray-700">
@@ -122,7 +122,7 @@ export default function Careers() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <MapPin className="w-8 h-8 mt-1" />
+            <MapPin className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Hybrid &amp; On-Site Work</h3>
               <p className="text-gray-700">

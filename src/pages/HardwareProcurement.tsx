@@ -101,7 +101,7 @@ export default function HardwareProcurement() {
           transition={{ duration: 0.6 }}
         >
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex items-start gap-4">
-            <DollarSign className="w-8 h-8 mt-1" />
+            <DollarSign className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Cost Optimization</h3>
               <p className="text-gray-600">
@@ -112,7 +112,7 @@ export default function HardwareProcurement() {
           </div>
 
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex items-start gap-4">
-            <Barcode className="w-8 h-8 mt-1" />
+            <Barcode className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Asset Tracking</h3>
               <p className="text-gray-600">

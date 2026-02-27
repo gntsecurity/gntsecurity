@@ -43,7 +43,7 @@ export default function IncidentResponse() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <AlertTriangle className="w-7 h-7 text-blue-600" />
+            <AlertTriangle className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">What Counts As An Incident</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -68,7 +68,7 @@ export default function IncidentResponse() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <Clock className="w-6 h-6 text-blue-600" />
+            <Clock className="h-6 w-6 text-slate-900" />
             <h2 className="text-lg font-semibold">How To Report An Incident</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -79,7 +79,7 @@ export default function IncidentResponse() {
           <div className="space-y-1 text-sm text-gray-800">
             <p>
               Phone:{" "}
-              <a href="tel:+15104690947" className="text-blue-600 hover:underline">
+              <a href="tel:+15104690947" className="hover:underline">
                 (510) 469-0947
               </a>
             </p>
@@ -87,7 +87,7 @@ export default function IncidentResponse() {
               Email:{" "}
               <a
                 href="mailto:sales@gntsecurity.com"
-                className="text-blue-600 hover:underline break-all"
+                className="hover:underline break-all"
               >
                 sales@gntsecurity.com
               </a>
@@ -109,7 +109,7 @@ export default function IncidentResponse() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <Shield className="w-6 h-6 text-blue-600" />
+            <Shield className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">Response For Managed Clients</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -138,7 +138,7 @@ export default function IncidentResponse() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <FileWarning className="w-6 h-6 text-blue-600" />
+            <FileWarning className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">Billable Incident Work</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -169,7 +169,7 @@ export default function IncidentResponse() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <Activity className="w-6 h-6 text-blue-600" />
+            <Activity className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">Typical Response Steps</h2>
           </div>
           <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
@@ -190,7 +190,7 @@ export default function IncidentResponse() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <KeyRound className="w-6 h-6 text-blue-600" />
+            <KeyRound className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">Client Responsibilities During Incidents</h2>
           </div>
           <ul className="space-y-2 text-sm text-gray-700">
@@ -207,16 +207,16 @@ export default function IncidentResponse() {
           <div className="mt-4 space-y-2 text-sm text-gray-700">
             <p className="font-semibold text-gray-900">Incident Contact:</p>
             <p className="flex items-center gap-2">
-              <PhoneCall className="w-4 h-4 text-blue-600" />
-              <a href="tel:+15104690947" className="text-blue-600 hover:underline">
+              <PhoneCall className="h-4 w-4 text-slate-600" />
+              <a href="tel:+15104690947" className="hover:underline">
                 (510) 469-0947
               </a>
             </p>
             <p className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-blue-600" />
+              <Mail className="h-4 w-4 text-slate-600" />
               <a
                 href="mailto:sales@gntsecurity.com"
-                className="text-blue-600 hover:underline break-all"
+                className="hover:underline break-all"
               >
                 sales@gntsecurity.com
               </a>

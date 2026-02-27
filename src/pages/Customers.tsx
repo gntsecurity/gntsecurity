@@ -47,7 +47,7 @@ export default function Customers() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Users className="w-5 h-5 text-blue-600" />
+          <Users className="h-5 w-5 text-slate-900" />
           <h2 className="text-2xl font-semibold">Customer Directory</h2>
         </motion.div>
 
@@ -60,28 +60,26 @@ export default function Customers() {
           >
             <Link
               to="/customers/AACT"
-              className="group block bg-white border rounded-2xl p-6 shadow-md hover:shadow-lg transition"
+              className="group block gnt-card-solid p-6 transition hover:shadow-lift"
             >
               <div className="flex items-start justify-between gap-6">
                 <div className="space-y-2">
                   <p className="text-xs text-gray-500">Customer</p>
-                  <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-700 transition">
-                    AACT
-                  </h3>
+                  <h3 className="text-xl font-semibold text-slate-900">AACT</h3>
                   <p className="text-sm text-gray-700">Contacts and customer-specific details.</p>
                 </div>
-                <div className="shrink-0 rounded-xl border bg-gray-50 p-3">
-                  <Building2 className="w-6 h-6 text-blue-600" />
+                <div className="shrink-0 rounded-2xl border border-slate-200 bg-slate-50 p-3">
+                  <Building2 className="h-6 w-6 text-slate-900" />
                 </div>
               </div>
-              <div className="mt-5 text-sm font-semibold text-blue-600 group-hover:text-blue-700">
+              <div className="mt-5 text-sm font-semibold text-brand-700 group-hover:text-brand-800">
                 Open customer page
               </div>
             </Link>
           </motion.div>
 
           <motion.div
-            className="bg-gray-50 border rounded-2xl p-6"
+            className="gnt-card p-6"
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05 }}

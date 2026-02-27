@@ -103,7 +103,7 @@ export default function NetworkDeploymentStandards() {
           transition={{ duration: 0.6 }}
         >
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Network className="w-8 h-8 mt-1" />
+            <Network className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Standard Designs</h3>
               <p className="text-gray-700">
@@ -112,7 +112,7 @@ export default function NetworkDeploymentStandards() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Server className="w-8 h-8 mt-1" />
+            <Server className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Core Services</h3>
               <p className="text-gray-700">
@@ -121,7 +121,7 @@ export default function NetworkDeploymentStandards() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <ShieldCheck className="w-8 h-8 mt-1" />
+            <ShieldCheck className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Change Management</h3>
               <p className="text-gray-700">
@@ -141,7 +141,7 @@ export default function NetworkDeploymentStandards() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-start gap-3 mb-3">
-            <Workflow className="w-7 h-7 mt-1" />
+            <Workflow className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h2 className="text-2xl font-semibold">Deployment Process</h2>
               <p className="text-gray-700">

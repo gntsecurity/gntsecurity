@@ -33,7 +33,7 @@ export default function RemoteSupport() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <Laptop2 className="w-7 h-7 text-blue-600" />
+            <Laptop2 className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">How It Works</h2>
           </div>
           <ol className="space-y-3 text-sm text-gray-700 list-decimal list-inside">
@@ -67,7 +67,7 @@ export default function RemoteSupport() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <PhoneCall className="w-6 h-6 text-blue-600" />
+            <PhoneCall className="h-6 w-6 text-slate-900" />
             <h2 className="text-lg font-semibold">Contact During Session</h2>
           </div>
           <p className="text-sm text-gray-700">
@@ -77,7 +77,7 @@ export default function RemoteSupport() {
           <div className="space-y-1 text-sm text-gray-800">
             <p>
               Phone:{" "}
-              <a href="tel:+15104690947" className="text-blue-600 hover:underline">
+              <a href="tel:+15104690947" className="hover:underline">
                 (510) 469-0947
               </a>
             </p>
@@ -85,21 +85,21 @@ export default function RemoteSupport() {
               Email:{" "}
               <a
                 href="mailto:sales@gntsecurity.com"
-                className="text-blue-600 hover:underline break-all"
+                className="hover:underline break-all"
               >
                 sales@gntsecurity.com
               </a>
             </p>
           </div>
           <div className="flex items-center gap-3 pt-4">
-            <ShieldCheck className="w-5 h-5 text-blue-600" />
+            <ShieldCheck className="h-4 w-4 text-slate-600" />
             <p className="text-xs text-gray-600">
               GNT Security will never ask you to share passwords over the phone or email. Remote access is used only
               for support with your permission.
             </p>
           </div>
           <div className="flex items-center gap-3 pt-2">
-            <MousePointer2 className="w-5 h-5 text-blue-600" />
+            <MousePointer2 className="h-4 w-4 text-slate-600" />
             <p className="text-xs text-gray-600">
               You can see everything happening on your screen. If you need to stop, you can close the session window at
               any time.

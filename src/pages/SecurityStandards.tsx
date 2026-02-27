@@ -41,7 +41,7 @@ export default function SecurityStandards() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <ShieldCheck className="w-7 h-7 text-blue-600" />
+            <ShieldCheck className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">Endpoint Security</h2>
           </div>
           <ul className="space-y-1 text-sm text-gray-700">
@@ -61,7 +61,7 @@ export default function SecurityStandards() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <Lock className="w-7 h-7 text-blue-600" />
+            <Lock className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">Access Control</h2>
           </div>
           <ul className="space-y-1 text-sm text-gray-700">
@@ -80,7 +80,7 @@ export default function SecurityStandards() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <KeyRound className="w-7 h-7 text-blue-600" />
+            <KeyRound className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">Identity & Authentication</h2>
           </div>
           <ul className="space-y-1 text-sm text-gray-700">
@@ -101,7 +101,7 @@ export default function SecurityStandards() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <HardDrive className="w-6 h-6 text-blue-600" />
+            <HardDrive className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">Backup & Recovery</h2>
           </div>
           <ul className="space-y-2 text-sm text-gray-700">
@@ -121,7 +121,7 @@ export default function SecurityStandards() {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <Wifi className="w-6 h-6 text-blue-600" />
+            <Wifi className="h-6 w-6 text-slate-900" />
             <h2 className="text-xl font-semibold">Network & Perimeter</h2>
           </div>
           <ul className="space-y-2 text-sm text-gray-700">
@@ -136,7 +136,7 @@ export default function SecurityStandards() {
 
       <section className="max-w-5xl mx-auto bg-white border rounded-2xl p-6 shadow-sm space-y-5 mb-16">
         <div className="flex items-center gap-3">
-          <ClipboardList className="w-6 h-6 text-blue-600" />
+          <ClipboardList className="h-6 w-6 text-slate-900" />
           <h2 className="text-xl font-semibold">Operational Practices</h2>
         </div>
         <ul className="space-y-2 text-sm text-gray-700">
@@ -147,7 +147,7 @@ export default function SecurityStandards() {
           <li>• Standard build templates are used where possible</li>
         </ul>
         <div className="flex items-center gap-3 pt-2">
-          <AlertTriangle className="w-5 h-5 text-blue-600" />
+          <AlertTriangle className="h-4 w-4 text-slate-600" />
           <p className="text-xs text-gray-600">
             These baselines are a floor, not a ceiling. Some industries or environments
             may require stricter controls, which can be added on top of this foundation.

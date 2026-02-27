@@ -104,7 +104,7 @@ export default function BusinessContinuityDR() {
           transition={{ duration: 0.6 }}
         >
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Server className="w-8 h-8 mt-1" />
+            <Server className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">On-Premises Workloads</h3>
               <p className="text-gray-700">
@@ -113,7 +113,7 @@ export default function BusinessContinuityDR() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Cloud className="w-8 h-8 mt-1" />
+            <Cloud className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Cloud &amp; SaaS</h3>
               <p className="text-gray-700">
@@ -122,7 +122,7 @@ export default function BusinessContinuityDR() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Database className="w-8 h-8 mt-1" />
+            <Database className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Data Retention</h3>
               <p className="text-gray-700">
@@ -142,7 +142,7 @@ export default function BusinessContinuityDR() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-start gap-4 mb-4">
-            <AlertTriangle className="w-8 h-8 mt-1" />
+            <AlertTriangle className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h2 className="text-2xl font-semibold">When an Incident Happens</h2>
               <p className="text-gray-700">

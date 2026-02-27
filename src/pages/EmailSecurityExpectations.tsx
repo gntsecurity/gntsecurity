@@ -105,7 +105,7 @@ export default function EmailSecurityExpectations() {
           transition={{ duration: 0.6 }}
         >
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <Filter className="w-8 h-8 mt-1" />
+            <Filter className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Message Filtering</h3>
               <p className="text-gray-700">
@@ -114,7 +114,7 @@ export default function EmailSecurityExpectations() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <KeyRound className="w-8 h-8 mt-1" />
+            <KeyRound className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Multi-Factor Authentication</h3>
               <p className="text-gray-700">
@@ -123,7 +123,7 @@ export default function EmailSecurityExpectations() {
             </div>
           </div>
           <div className="p-6 border rounded-2xl bg-white shadow-sm flex gap-4 items-start">
-            <AlertTriangle className="w-8 h-8 mt-1" />
+            <AlertTriangle className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h3 className="font-semibold mb-1">Reporting Suspicious Email</h3>
               <p className="text-gray-700">
@@ -143,7 +143,7 @@ export default function EmailSecurityExpectations() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-start gap-3 mb-4">
-            <Mail className="w-7 h-7 mt-1" />
+            <Mail className="h-6 w-6 mt-1 text-slate-900" />
             <div>
               <h2 className="text-2xl font-semibold">Everyday Expectations for Users</h2>
             </div>

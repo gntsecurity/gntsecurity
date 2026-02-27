@@ -40,17 +40,17 @@ export default function Procezly() {
       <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 pb-20">
         {[
           {
-            icon: <LayoutDashboard className="w-8 h-8 text-blue-600" />,
+            icon: <LayoutDashboard className="h-6 w-6 text-slate-900" />,
             title: "Structured Workflows",
             desc: "Turn scattered tasks into repeatable workflows with clear steps and ownership.",
           },
           {
-            icon: <Repeat className="w-8 h-8 text-blue-600" />,
+            icon: <Repeat className="h-6 w-6 text-slate-900" />,
             title: "Automation Mindset",
             desc: "Designed around removing manual rework and keeping processes consistent every time.",
           },
           {
-            icon: <CheckCircle2 className="w-8 h-8 text-blue-600" />,
+            icon: <CheckCircle2 className="h-6 w-6 text-slate-900" />,
             title: "Built By An MSP",
             desc: "Created by the same mindset that runs secure, reliable managed environments.",
           },
