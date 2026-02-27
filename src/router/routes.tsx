@@ -1,3 +1,5 @@
+Update the routes file for me:
+
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Procezly from "../pages/Procezly";
@@ -23,7 +25,7 @@ import Customers from "../pages/Customers";
 import AACT from "../pages/customers/AACT";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Terms from "../pages/Terms";
-import Staff from "../pages/Staff";
+import Terms from "../pages/Staff";
 
 export const routes = [
   { path: "/", element: <Home /> },
@@ -31,7 +33,7 @@ export const routes = [
   { path: "/services", element: <Services /> },
   { path: "/contact", element: <Contact /> },
   { path: "/procezly", element: <Procezly /> },
-  { path: "/github", element: <GitHub /> },
+  { path: "/GitHub", element: <GitHub /> },
   { path: "/sla", element: <SLA /> },
   { path: "/onboarding", element: <Onboarding /> },
   { path: "/remote-support", element: <RemoteSupport /> },
@@ -47,7 +49,7 @@ export const routes = [
   { path: "/testimonials", element: <Testimonials /> },
   { path: "/careers", element: <Careers /> },
   { path: "/customers", element: <Customers /> },
-  { path: "/customers/aact", element: <AACT /> },
+  { path: "/customers/AACT", element: <AACT /> },
   { path: "/privacy-policy", element: <PrivacyPolicy /> },
   { path: "/terms", element: <Terms /> },
   { path: "/staff", element: <Staff /> },
