@@ -4,110 +4,79 @@ import { ShieldCheck, Server, Zap, BarChart3, Wifi, PhoneCall } from "lucide-rea
 
 export default function Home() {
   return (
-    <div className="space-y-32">
+    <div className="space-y-24">
       <section className="relative overflow-hidden bg-white">
         <div className="absolute inset-0 pointer-events-none hero-plus-pattern opacity-40" />
-        <div className="absolute top-[-160px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-100 blur-3xl opacity-20 pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white via-white to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white to-transparent pointer-events-none" />
 
-        <div className="max-w-6xl mx-auto px-4 pt-24 pb-20 relative">
+        <div className="max-w-6xl mx-auto px-4 pt-20 pb-16 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <motion.div
-                className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/70 backdrop-blur px-4 py-2 text-sm text-blue-700"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <ShieldCheck className="h-4 w-4" />
-                Security-driven managed services
-              </motion.div>
-
               <motion.h1
                 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-gray-900"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
+                transition={{ duration: 0.55 }}
               >
-                Managed IT & Cybersecurity{" "}
-                <span className="text-blue-600">for Businesses</span>
+                Managed IT & Cybersecurity for Businesses
               </motion.h1>
 
               <motion.p
                 className="text-lg text-gray-700 max-w-xl"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
               >
-                GNT Security delivers fully managed IT, endpoint security, network support, and reliable
-                helpdesk so you do not have to think about technology at all.
-              </motion.p>
-
-              <motion.p
-                className="text-base text-gray-600 max-w-xl"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-              >
-                Built for reliability, security, and scalability—so your team can stay focused while we
-                handle the systems behind the scenes.
+                Fully managed IT, endpoint security, and network support with a reliable helpdesk.
               </motion.p>
 
               <motion.div
-                className="flex flex-wrap gap-4 pt-2"
+                className="flex flex-wrap gap-3 pt-1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
               >
                 <a
                   href="mailto:sales@gntsecurity.com"
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+                  className="px-5 py-2.5 bg-gray-900 text-white rounded-lg font-semibold hover:bg-black transition"
                 >
-                  Email Sales For Pricing
+                  Email Sales
                 </a>
                 <Link
                   to="/services"
-                  className="px-6 py-3 border border-gray-300 text-gray-800 rounded-lg font-semibold hover:bg-gray-50 transition"
+                  className="px-5 py-2.5 border border-gray-300 text-gray-900 rounded-lg font-semibold hover:bg-gray-50 transition"
                 >
-                  View Managed Services
+                  View Services
                 </Link>
               </motion.div>
 
               <motion.div
-                className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-600 pt-3"
+                className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-600 pt-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.55, duration: 0.5 }}
+                transition={{ delay: 0.28, duration: 0.45 }}
               >
                 <span className="inline-flex items-center gap-2">
-                  <Zap className="h-4 w-4 text-blue-600" />
+                  <Zap className="h-4 w-4 text-gray-700" />
                   Responsive support
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Wifi className="h-4 w-4 text-blue-600" />
-                  Network + endpoints
+                  <Wifi className="h-4 w-4 text-gray-700" />
+                  Networks + endpoints
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Server className="h-4 w-4 text-blue-600" />
+                  <Server className="h-4 w-4 text-gray-700" />
                   Standardized management
                 </span>
               </motion.div>
-
-              <motion.p
-                className="text-sm text-gray-500 pt-2"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-              >
-                Remote-first support with planned travel and partner coverage when on-site service is
-                needed.
-              </motion.p>
             </div>
 
             <motion.div
-              className="bg-white/80 backdrop-blur border rounded-2xl shadow-lg p-6 md:p-8"
-              initial={{ opacity: 0, x: 20 }}
+              className="bg-white/85 backdrop-blur border rounded-2xl shadow-lg p-6 md:p-8"
+              initial={{ opacity: 0, x: 16 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.55 }}
             >
               <div className="flex items-center gap-2 mb-6">
                 <div className="flex gap-2">
@@ -141,7 +110,7 @@ export default function Home() {
                     <div className="text-xs text-gray-500">KC-001</div>
                     <div className="text-sm font-semibold text-gray-900">Workstation Health Check</div>
                   </div>
-                  <span className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-3 py-1">
+                  <span className="text-xs font-semibold text-gray-700 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
                     Complete
                   </span>
                 </div>
@@ -151,7 +120,7 @@ export default function Home() {
                     <div className="text-xs text-gray-500">KC-002</div>
                     <div className="text-sm font-semibold text-gray-900">Backup Verification</div>
                   </div>
-                  <span className="text-xs font-semibold text-yellow-700 bg-yellow-50 border border-yellow-200 rounded-full px-3 py-1">
+                  <span className="text-xs font-semibold text-gray-700 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
                     Pending
                   </span>
                 </div>
@@ -161,7 +130,7 @@ export default function Home() {
                     <div className="text-xs text-gray-500">KC-003</div>
                     <div className="text-sm font-semibold text-gray-900">Firewall Review</div>
                   </div>
-                  <span className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-3 py-1">
+                  <span className="text-xs font-semibold text-gray-700 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
                     Complete
                   </span>
                 </div>
@@ -171,127 +140,119 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <section className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
         {[
           {
-            icon: <ShieldCheck className="w-8 h-8 text-blue-600" />,
+            icon: <ShieldCheck className="w-7 h-7 text-gray-900" />,
             title: "Security-First",
-            desc: "Endpoint protection, patching, hardening, and monitoring built into every plan.",
+            desc: "EDR, patching, hardening, and monitoring baked in.",
           },
           {
-            icon: <Server className="w-8 h-8 text-blue-600" />,
-            title: "Managed Infrastructure",
-            desc: "Servers, workstations, laptops, and network devices maintained and monitored.",
+            icon: <Server className="w-7 h-7 text-gray-900" />,
+            title: "Managed IT",
+            desc: "Devices, servers, and network gear maintained and monitored.",
           },
           {
-            icon: <Wifi className="w-8 h-8 text-blue-600" />,
+            icon: <Wifi className="w-7 h-7 text-gray-900" />,
             title: "Reliable Networks",
-            desc: "Wi-Fi, routing, VPN, and remote access configured for uptime and visibility.",
+            desc: "Wi-Fi, VPN, routing, and secure remote access configured right.",
           },
           {
-            icon: <Zap className="w-8 h-8 text-blue-600" />,
-            title: "Responsive Support",
-            desc: "Helpdesk for day-to-day issues and on-site support options when needed.",
+            icon: <Zap className="w-7 h-7 text-gray-900" />,
+            title: "Helpdesk",
+            desc: "Fast support for day-to-day issues and escalations.",
           },
         ].map(({ icon, title, desc }, i) => (
           <motion.div
             key={title}
-            className="bg-white border rounded-2xl p-6 shadow-md space-y-4"
-            initial={{ opacity: 0, y: 20 }}
+            className="bg-white border rounded-2xl p-6 shadow-sm space-y-3"
+            initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
+            transition={{ delay: i * 0.06 }}
             viewport={{ once: true }}
           >
             <div>{icon}</div>
-            <h3 className="text-xl font-semibold">{title}</h3>
+            <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
             <p className="text-gray-600 text-sm">{desc}</p>
           </motion.div>
         ))}
       </section>
 
-      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start px-4">
         <motion.div
-          className="space-y-6"
-          initial={{ opacity: 0, x: -20 }}
+          className="space-y-5"
+          initial={{ opacity: 0, x: -14 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold">What We Manage For You</h2>
+          <h2 className="text-3xl font-bold text-gray-900">What We Manage</h2>
           <p className="text-gray-700">
-            Instead of juggling vendors, tools, and tickets, you get one point of contact for
-            everything: devices, users, security, backups, networking, and cloud.
+            One point of contact for devices, users, security, backups, networking, and cloud.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
             <ul className="space-y-2">
-              <li>• 24/7 device and security monitoring</li>
-              <li>• Antivirus, EDR, and ransomware protection</li>
-              <li>• Patch and update management</li>
-              <li>• User onboarding and offboarding</li>
-              <li>• Email and identity management</li>
+              <li>• Monitoring + alerting</li>
+              <li>• EDR + antivirus</li>
+              <li>• Patch management</li>
+              <li>• Onboarding/offboarding</li>
+              <li>• Email + identity</li>
             </ul>
             <ul className="space-y-2">
-              <li>• Wi-Fi, switching, and firewall management</li>
-              <li>• VPN and secure remote access</li>
-              <li>• Backup and disaster recovery</li>
-              <li>• Hardware lifecycle planning</li>
-              <li>• Remote work and branch office setups</li>
+              <li>• Firewalls + Wi-Fi</li>
+              <li>• VPN + remote access</li>
+              <li>• Backups + recovery</li>
+              <li>• Lifecycle planning</li>
+              <li>• Remote work setups</li>
             </ul>
           </div>
         </motion.div>
 
         <motion.div
-          className="bg-gray-50 border rounded-2xl p-6 space-y-5"
-          initial={{ opacity: 0, x: 20 }}
+          className="bg-white border rounded-2xl p-6 space-y-4 shadow-sm"
+          initial={{ opacity: 0, x: 14 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-3">
-            <BarChart3 className="w-6 h-6 text-blue-600" />
-            <h3 className="text-xl font-semibold">Always-On Visibility</h3>
+            <BarChart3 className="w-6 h-6 text-gray-900" />
+            <h3 className="text-xl font-semibold text-gray-900">Always-On Visibility</h3>
           </div>
           <p className="text-gray-700 text-sm">
-            Every system we manage feeds into centralized monitoring so issues are caught early.
-            You get status, alerts, and recommendations without having to log into ten different
-            dashboards.
+            Centralized monitoring catches issues early and keeps systems consistent.
           </p>
-          <div className="grid grid-cols-1 gap-3 text-xs text-gray-600">
-            <div className="space-y-1">
-              <p className="font-semibold text-gray-800">Built For Businesses</p>
-              <p>• Offices, retail, warehouses, remote staff</p>
-              <p>• Policy-driven security and access</p>
-              <p>• Standardized builds and documentation</p>
-            </div>
+          <div className="text-sm text-gray-700 space-y-2">
+            <p className="font-semibold text-gray-900">Built for businesses</p>
+            <p>Offices, retail, warehouses, remote staff, and multi-site setups.</p>
           </div>
         </motion.div>
       </section>
 
-      <section className="max-w-5xl mx-auto text-center space-y-6 pb-20">
+      <section className="max-w-5xl mx-auto text-center space-y-5 pb-20 px-4">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-3xl md:text-4xl font-bold text-gray-900"
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Ready To Offload IT, Security, And Network Headaches?
+          Ready to hand off IT and security?
         </motion.h2>
         <p className="text-gray-700 max-w-3xl mx-auto">
-          Tell us what you are working with today and what is breaking. We will map out a managed
-          service plan that covers devices, users, security, backups, and connectivity in one
-          agreement.
+          Tell us what you have and what’s breaking. We’ll map out a plan that covers devices, users,
+          security, backups, and connectivity.
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-3">
           <a
             href="mailto:sales@gntsecurity.com"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
+            className="inline-flex items-center gap-2 px-7 py-3 bg-gray-900 text-white rounded-lg text-base font-semibold hover:bg-black transition"
           >
-            Email Sales For Pricing
+            Email Sales
           </a>
           <a
             href="tel:+15104690947"
-            className="inline-flex items-center gap-2 px-8 py-3 border border-gray-300 rounded-lg text-lg font-medium text-gray-800 hover:bg-gray-100 transition"
+            className="inline-flex items-center gap-2 px-7 py-3 border border-gray-300 rounded-lg text-base font-semibold text-gray-900 hover:bg-gray-50 transition"
           >
             <PhoneCall className="w-5 h-5" />
             Call (510) 469-0947
