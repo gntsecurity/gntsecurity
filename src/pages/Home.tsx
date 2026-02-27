@@ -68,63 +68,46 @@ export default function Home() {
             </div>
 
             <motion.div
-              className="gnt-card-solid p-6 md:p-8"
+              className="gnt-card-solid p-8 space-y-8"
               initial={{ opacity: 0, x: 16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.55 }}
             >
-              <div className="flex items-center gap-2 mb-6">
-                <div className="flex gap-2">
-                  <span className="h-3 w-3 rounded-full bg-red-400" />
-                  <span className="h-3 w-3 rounded-full bg-yellow-400" />
-                  <span className="h-3 w-3 rounded-full bg-green-400" />
-                </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-slate-900">
+                  What You Get With GNT Security LLC
+                </h3>
+                <p className="text-sm text-slate-600">
+                  Structured, security-first IT management built for business environments.
+                </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="rounded-3xl border border-slate-200 bg-white p-4">
-                  <div className="text-xs text-slate-500">Active Alerts</div>
-                  <div className="text-2xl font-bold text-slate-900 mt-1">3</div>
-                </div>
-                <div className="rounded-3xl border border-slate-200 bg-white p-4">
-                  <div className="text-xs text-slate-500">This Week</div>
-                  <div className="text-2xl font-bold text-slate-900 mt-1">14</div>
-                </div>
-                <div className="rounded-3xl border border-slate-200 bg-white p-4">
-                  <div className="text-xs text-slate-500">Compliance</div>
-                  <div className="text-2xl font-bold text-slate-900 mt-1">98%</div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <div className="rounded-3xl border border-slate-200 bg-white px-4 py-3 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs text-slate-500">KC-001</div>
-                    <div className="text-sm font-semibold text-slate-900">Workstation Health Check</div>
+              <div className="space-y-6">
+                <div className="border border-slate-200 rounded-3xl p-6">
+                  <div className="text-sm font-semibold text-slate-900">
+                    Standardized Infrastructure
                   </div>
-                  <span className="text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-full px-3 py-1">
-                    Complete
-                  </span>
+                  <p className="text-sm text-slate-600 mt-2">
+                    Consistent device configurations, managed firewalls, secure Wi-Fi, and controlled access policies across locations.
+                  </p>
                 </div>
 
-                <div className="rounded-3xl border border-slate-200 bg-white px-4 py-3 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs text-slate-500">KC-002</div>
-                    <div className="text-sm font-semibold text-slate-900">Backup Verification</div>
+                <div className="border border-slate-200 rounded-3xl p-6">
+                  <div className="text-sm font-semibold text-slate-900">
+                    Continuous Monitoring
                   </div>
-                  <span className="text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-full px-3 py-1">
-                    Pending
-                  </span>
+                  <p className="text-sm text-slate-600 mt-2">
+                    Endpoint detection, patch management, backup verification, and proactive alerting — not reactive firefighting.
+                  </p>
                 </div>
 
-                <div className="rounded-3xl border border-slate-200 bg-white px-4 py-3 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs text-slate-500">KC-003</div>
-                    <div className="text-sm font-semibold text-slate-900">Firewall Review</div>
+                <div className="border border-slate-200 rounded-3xl p-6">
+                  <div className="text-sm font-semibold text-slate-900">
+                    Clear Accountability
                   </div>
-                  <span className="text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200 rounded-full px-3 py-1">
-                    Complete
-                  </span>
+                  <p className="text-sm text-slate-600 mt-2">
+                    Defined processes, documented standards, and measurable response expectations.
+                  </p>
                 </div>
               </div>
             </motion.div>
