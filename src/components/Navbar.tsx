@@ -15,52 +15,67 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="border-b bg-white">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
-          <Link to="/" className="flex items-center gap-3">
-            <img src="/logo.png" alt="GNT Security" className="h-8 w-auto" />
-            <div className="hidden sm:flex flex-col leading-tight">
-              <span className="font-semibold text-sm">GNT Security</span>
-              <span className="text-xs text-gray-500">Managed IT & Cybersecurity</span>
-            </div>
-          </Link>
+      <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/75 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div className="gnt-container">
+          <div className="flex items-center justify-between py-4">
+            <Link to="/" className="flex items-center gap-3">
+              <img src="/logo.png" alt="GNT Security" className="h-8 w-auto" />
+              <div className="hidden sm:flex flex-col leading-tight">
+                <span className="text-sm font-semibold text-slate-900">GNT Security</span>
+                <span className="text-xs text-slate-500">
+                  Managed IT & Cybersecurity · United States
+                </span>
+              </div>
+            </Link>
 
-          <nav className="hidden md:flex items-center space-x-6 text-sm">
-            {navItems.map(({ name, path, icon: Icon }) => (
-              <Link
-                key={name}
-                to={path}
-                className={`inline-flex items-center gap-2 ${
-                  pathname === path ? "text-blue-600 font-semibold" : "text-gray-600"
-                } hover:text-blue-700`}
-              >
-                <Icon className="h-4 w-4" />
-                {name}
-              </Link>
-            ))}
-            <a
-              href="mailto:sales@gntsecurity.com"
-              className="ml-4 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
-            >
-              Email Sales
-            </a>
-          </nav>
+            <nav className="hidden md:flex items-center gap-1 text-sm">
+              {navItems.map(({ name, path, icon: Icon }) => {
+                const active = pathname === path;
+                return (
+                  <Link
+                    key={name}
+                    to={path}
+                    className={[
+                      "inline-flex items-center gap-2 rounded-xl px-3 py-2 transition",
+                      active
+                        ? "bg-brand-50 text-brand-800"
+                        : "text-slate-700 hover:bg-slate-50 hover:text-slate-900",
+                    ].join(" ")}
+                  >
+                    <Icon className="h-4 w-4" />
+                    {name}
+                  </Link>
+                );
+              })}
+              <a href="mailto:sales@gntsecurity.com" className="ml-3 gnt-btn-brand">
+                Email Sales
+              </a>
+            </nav>
+          </div>
         </div>
       </header>
 
-      <nav className="md:hidden fixed bottom-0 inset-x-0 border-t bg-white z-40 flex justify-around py-2">
-        {navItems.map(({ name, path, icon: Icon }) => (
-          <Link
-            key={name}
-            to={path}
-            className={`flex flex-col items-center text-[11px] ${
-              pathname === path ? "text-blue-600" : "text-gray-500"
-            }`}
-          >
-            <Icon className="h-5 w-5 mb-1" />
-            {name}
-          </Link>
-        ))}
+      <nav className="md:hidden fixed bottom-0 inset-x-0 z-50 border-t border-slate-200/70 bg-white/85 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+        <div className="gnt-container">
+          <div className="flex justify-around py-2">
+            {navItems.map(({ name, path, icon: Icon }) => {
+              const active = pathname === path;
+              return (
+                <Link
+                  key={name}
+                  to={path}
+                  className={[
+                    "flex flex-col items-center rounded-xl px-3 py-2 text-[11px] transition",
+                    active ? "text-brand-700" : "text-slate-500 hover:text-slate-700",
+                  ].join(" ")}
+                >
+                  <Icon className="h-5 w-5 mb-1" />
+                  {name}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </nav>
     </>
   );
