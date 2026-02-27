@@ -1,3 +1,4 @@
+// src/components/Navbar.tsx
 import { Link, useLocation } from "react-router-dom";
 import { Home, Info, Wrench, Phone, BookOpen } from "lucide-react";
 
@@ -42,7 +43,9 @@ export default function Navbar() {
                         : "text-slate-700 hover:bg-slate-50 hover:text-slate-900",
                     ].join(" ")}
                   >
-                    <Icon className={["h-5 w-5", active ? "text-brand-700" : "text-slate-900"].join(" ")} />
+                    <Icon
+                      className={["h-5 w-5", active ? "text-brand-700" : "text-slate-900"].join(" ")}
+                    />
                     {name}
                   </Link>
                 );
@@ -69,7 +72,9 @@ export default function Navbar() {
                     active ? "text-brand-700" : "text-slate-600 hover:text-slate-900",
                   ].join(" ")}
                 >
-                  <Icon className={["h-5 w-5 mb-1", active ? "text-brand-700" : "text-slate-900"].join(" ")} />
+                  <Icon
+                    className={["h-5 w-5 mb-1", active ? "text-brand-700" : "text-slate-900"].join(" ")}
+                  />
                   {name}
                 </Link>
               );

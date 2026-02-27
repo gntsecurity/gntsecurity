@@ -1,3 +1,4 @@
+// src/pages/Home.tsx
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ShieldCheck, Server, Zap, BarChart3, Wifi, PhoneCall } from "lucide-react";
