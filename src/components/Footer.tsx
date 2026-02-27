@@ -44,6 +44,16 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://staff.gntsecurity.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-slate-900 transition"
+                >
+                  Staff Portal
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -88,7 +98,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-slate-600">
               <li>
                 <a
-                  href="mailto:sales@gntsecurity.com"
+                  href="mailto:info@gntsecurity.com"
                   className="hover:text-slate-900 transition"
                 >
                   info@gntsecurity.com
