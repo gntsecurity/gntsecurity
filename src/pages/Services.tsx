@@ -14,6 +14,7 @@ import {
   ClipboardList,
   LifeBuoy,
   Siren,
+  MapPin,
 } from "lucide-react";
 
 export default function Services() {
@@ -103,6 +104,39 @@ export default function Services() {
     { title: "Customer Resource Library", desc: "Client-facing links and helpful resources.", to: "/customer-resource-library" },
   ];
 
+  const locationPages = [
+    {
+      city: "Oakland",
+      state: "CA",
+      to: "/managed-it/oakland-ca",
+      desc: "Managed IT services, cybersecurity, infrastructure, and business support for Oakland organizations.",
+    },
+    {
+      city: "Dayton",
+      state: "OH",
+      to: "/managed-it/dayton-oh",
+      desc: "Local managed services, network support, and technology operations for Dayton businesses.",
+    },
+    {
+      city: "Columbus",
+      state: "OH",
+      to: "/managed-it/columbus-oh",
+      desc: "Business IT support, managed infrastructure, and proactive security for Columbus companies.",
+    },
+    {
+      city: "Detroit",
+      state: "MI",
+      to: "/managed-it/detroit-mi",
+      desc: "Managed IT, endpoint support, and infrastructure services for Detroit business environments.",
+    },
+    {
+      city: "Tampa",
+      state: "FL",
+      to: "/managed-it/tampa-fl",
+      desc: "Technology management, cybersecurity, and business support for organizations in Tampa.",
+    },
+  ];
+
   return (
     <div className="space-y-24">
       <section className="text-center max-w-4xl mx-auto pt-20 space-y-6">
@@ -144,6 +178,53 @@ export default function Services() {
             </ul>
           </motion.div>
         ))}
+      </section>
+
+      <section className="max-w-6xl mx-auto space-y-6">
+        <motion.div
+          className="space-y-3"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-semibold flex items-center gap-2">
+            <MapPin className="h-7 w-7 text-slate-900" />
+            Managed IT Service Areas
+          </h2>
+          <p className="text-sm text-gray-700 max-w-3xl">
+            Explore our city-specific managed IT service pages for businesses looking for local
+            support, cybersecurity, infrastructure assistance, telecommunications, and ongoing IT
+            management.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {locationPages.map((location, i) => (
+            <motion.div
+              key={location.to}
+              className="bg-white border rounded-2xl p-6 shadow-md space-y-4"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.05 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-2 text-slate-900">
+                <MapPin className="h-5 w-5" />
+                <h3 className="text-xl font-semibold">
+                  {location.city}, {location.state}
+                </h3>
+              </div>
+              <p className="text-sm text-gray-700">{location.desc}</p>
+              <Link
+                to={location.to}
+                className="inline-flex items-center rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-gray-50 transition"
+              >
+                View {location.city} Page
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       <section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
