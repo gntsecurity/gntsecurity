@@ -48,6 +48,7 @@ export const locations: Location[] = [
   { city: "Midland", state: "MI", slug: "midland-mi" },
   { city: "Bay City", state: "MI", slug: "bay-city-mi" },
   { city: "Muskegon", state: "MI", slug: "muskegon-mi" },
+  { city: "Taylor", state: "MI", slug: "taylor-mi" },
   { city: "Kalamazoo", state: "MI", slug: "kalamazoo-mi" }
 
 ]
