@@ -65,7 +65,7 @@ export const locations: Location[] = [
   { city: "Midland", state: "MI", slug: "midland-mi" },
   { city: "Bay City", state: "MI", slug: "bay-city-mi" },
   { city: "Muskegon", state: "MI", slug: "muskegon-mi" },
-  { city: "Kalamazoo", state: "MI", slug: "kalamazoo-mi" }
+  { city: "Kalamazoo", state: "MI", slug: "kalamazoo-mi" },
 
   // Texas
   { city: "Dallas", state: "TX", slug: "dallas-tx" },
@@ -75,33 +75,28 @@ export const locations: Location[] = [
   { city: "Irving", state: "TX", slug: "irving-tx" },
   { city: "Frisco", state: "TX", slug: "frisco-tx" },
   { city: "McKinney", state: "TX", slug: "mckinney-tx" },
-  { city: "Garland", state: "TX", slug: "garland-tx" },
   { city: "Grand Prairie", state: "TX", slug: "grand-prairie-tx" },
-  { city: "Mesquite", state: "TX", slug: "mesquite-tx" },
   { city: "Tyler", state: "TX", slug: "tyler-tx" },
   { city: "Austin", state: "TX", slug: "austin-tx" },
   { city: "Round Rock", state: "TX", slug: "round-rock-tx" },
   { city: "Georgetown", state: "TX", slug: "georgetown-tx" },
   { city: "Houston", state: "TX", slug: "houston-tx" },
   { city: "Pasadena", state: "TX", slug: "pasadena-tx" },
-  { city: "Baytown", state: "TX", slug: "baytown-tx" },
   { city: "Sugar Land", state: "TX", slug: "sugar-land-tx" },
-  { city: "The Woodlands", state: "TX", slug: "the-woodlands-tx" },
   { city: "San Antonio", state: "TX", slug: "san-antonio-tx" },
   { city: "New Braunfels", state: "TX", slug: "new-braunfels-tx" },
-  { city: "El Paso", state: "TX", slug: "el-paso-tx" },
-  { city: "Brownsville", state: "TX", slug: "brownsville-tx" },
+  { city: "Troy", state: "TX", slug: "troy-tx" },
 
   // Florida
   { city: "Jacksonville", state: "FL", slug: "jacksonville-fl" },
   { city: "Orlando", state: "FL", slug: "orlando-fl" },
   { city: "Tampa", state: "FL", slug: "tampa-fl" },
-  { city: "Lakeland", state: "FL", slug: "lakeland-fl" },
-  { city: "St. Petersburg", state: "FL", slug: "st-petersburg-fl" },
+  { city: "St Petersburg", state: "FL", slug: "st-petersburg-fl" },
   { city: "Clearwater", state: "FL", slug: "clearwater-fl" },
+  { city: "Lakeland", state: "FL", slug: "lakeland-fl" },
   { city: "Melbourne", state: "FL", slug: "melbourne-fl" },
   { city: "Palm Bay", state: "FL", slug: "palm-bay-fl" },
   { city: "Daytona Beach", state: "FL", slug: "daytona-beach-fl" },
-  { city: "Ocala", state: "FL", slug: "ocala-fl" },
+  { city: "Ocala", state: "FL", slug: "ocala-fl" }
 
 ]
