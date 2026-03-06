@@ -25,6 +25,18 @@ import Terms from "../pages/Terms";
 import Staff from "../pages/Staff";
 import ManagedItLocation from "../pages/ManagedItLocation";
 
+import { locations } from "../data/locations";
+
+const locationRoutes = locations.map((location) => ({
+  path: `/managed-it/${location.slug}`,
+  element: (
+    <ManagedItLocation
+      city={location.city}
+      state={location.state}
+    />
+  ),
+}));
+
 export const routes = [
   { path: "/", element: <Home /> },
   { path: "/about", element: <About /> },
@@ -52,11 +64,7 @@ export const routes = [
   { path: "/terms", element: <Terms /> },
   { path: "/staff", element: <Staff /> },
 
-  { path: "/managed-it/oakland-ca", element: <ManagedItLocation city="Oakland" state="CA" /> },
-  { path: "/managed-it/dayton-oh", element: <ManagedItLocation city="Dayton" state="OH" /> },
-  { path: "/managed-it/columbus-oh", element: <ManagedItLocation city="Columbus" state="OH" /> },
-  { path: "/managed-it/detroit-mi", element: <ManagedItLocation city="Detroit" state="MI" /> },
-  { path: "/managed-it/tampa-fl", element: <ManagedItLocation city="Tampa" state="FL" /> },
+  ...locationRoutes,
 
   { path: "*", element: <NotFound /> },
 ];
